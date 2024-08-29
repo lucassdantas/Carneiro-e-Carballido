@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import './App.css'
 import { FloatWppButton } from './components/FloatWppButton'
+import './App.css'
 
 function App() {
   return (
