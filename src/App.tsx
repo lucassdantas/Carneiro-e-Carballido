@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import { FloatWppButton } from './components/FloatWppButton'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-    </>
+    <FloatWppButton/>
   )
 }
 
