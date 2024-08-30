@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        'green-wpp':'#25D366'
+        'green-wpp':'#25D366',
+        'yellow-carneiro-e-carballido':'#fbc848',
+        'blue-carneiro-e-carballido':'#337a97'
       }
     },
   },
