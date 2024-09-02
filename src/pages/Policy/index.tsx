@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Policy() {
+export const Policy = () => {
   return (
     <>
       

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Terms() {
+export const Terms = () => {
   return (
     <>
       

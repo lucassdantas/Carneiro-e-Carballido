@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { Template } from '@/components/Template'
 
-function Home() {
+export const Home = () => {
   return (
-    <>
-      
-    </>
+    <Template pageTitle='Home'>
+      Home
+    </Template>
   )
 }
 

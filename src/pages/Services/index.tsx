@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Services() {
+export const Services = () => {
   return (
     <>
       
