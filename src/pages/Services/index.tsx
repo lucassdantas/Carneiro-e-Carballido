@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { Template } from '@/components/Template'
 
 export const Services = () => {
   return (
-    <>
-      
-    </>
+    <Template pageTitle='Serviços'>
+      <p>Serviços</p>
+    </Template>
   )
 }
 

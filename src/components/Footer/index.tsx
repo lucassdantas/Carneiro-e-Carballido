@@ -1,7 +1,9 @@
-import React from 'react'
+import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
 
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <ScreenWidthLimiter>
+      Footer
+    </ScreenWidthLimiter>
   )
 }

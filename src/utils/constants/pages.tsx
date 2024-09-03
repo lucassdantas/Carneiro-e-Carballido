@@ -10,36 +10,43 @@ export type PageType = {
   title:string;
   url:string;
   component:ReactElement;
+  showOnHeader?:boolean;
 }
 export const pages:PageType[] = [
   {
     title:'Home',
-    url:'home',
-    component:<Home/>
+    url:'/',
+    component:<Home/>,
+    showOnHeader:true
   },
   {
     title:'Sobre',
-    url:'sobre',
-    component:<About/>
+    url:'/sobre',
+    component:<About/>,
+    showOnHeader:true
   },
   {
     title:'Serviços',
-    url:'servicos',
-    component:<Services/>
+    url:'/servicos',
+    component:<Services/>,
+    showOnHeader:true
   },
   {
     title:'Contato',
-    url:'contato',
-    component:<Contact/>
+    url:'/contato',
+    component:<Contact/>,
+    showOnHeader:true
   },
   {
     title:'Política de privacidade',
-    url:'politica-de-privacidade',
-    component:<Policy/>
+    url:'/politica-de-privacidade',
+    component:<Policy/>,
+    showOnHeader:false,
   },
   {
     title:'Termos e condições de uso',
-    url:'termos-e-condicoes-de-uso',
-    component:<Terms/>
+    url:'/termos-e-condicoes-de-uso',
+    component:<Terms/>,
+    showOnHeader:false,
   },
 ]
