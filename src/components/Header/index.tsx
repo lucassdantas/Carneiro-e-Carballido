@@ -6,19 +6,19 @@ import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
 
 export const Header = () => {
   return (
-    <header>
+    <header className='-mb-24'>
       <ScreenWidthLimiter className='flex items-center'>
         <div className='flex flex-col justify-center w-1/6'>
           <img src={logo} alt='Logotipo' className='max-w-[250px]'/>
         </div>
 
-        <div className='flex flex-col justify-center w-3/6'>
-          <ul className='flex gap-4 items-center font-bold'>
+        <div className='flex flex-col justify-center w-4/6'>
+          <ul className='flex gap-4 items-center font-bold justify-center text-white'>
             {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url}><li>{page.title}</li></Link>})}
           </ul>
         </div>
 
-        <div className='flex flex-col justify-center w-2/6'>
+        <div className='flex flex-col justify-center items-end w-1/6'>
           <Button/>
         </div>
       </ScreenWidthLimiter>

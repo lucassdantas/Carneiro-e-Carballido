@@ -13,8 +13,8 @@ export const Template = ({children, pageTitle}:TemplateProps) => {
     <>
       <Header/>
       <main>
-        <section className='w-full bg-gray-500 text-center flex flex-col items-center justify-center text-bold text-white min-h-[250px]'>
-          <h1 className='text-2xl font-bold'>{pageTitle}</h1>
+        <section className='w-full bg-gray-500 text-center flex flex-col items-center justify-center text-bold text-white lg:min-h-[450px]'>
+          <span className='text-2xl font-bold'>{pageTitle}</span>
         </section>
         <ScreenWidthLimiter>
           {children}
