@@ -21,31 +21,31 @@ export const pages:PageType[] = [
   },
   {
     title:'Sobre',
-    url:'sobre',
+    url:'/sobre',
     component:<About/>,
     showOnHeader:true
   },
   {
     title:'Serviços',
-    url:'servicos',
+    url:'/servicos',
     component:<Services/>,
     showOnHeader:true
   },
   {
     title:'Contato',
-    url:'contato',
+    url:'/contato',
     component:<Contact/>,
     showOnHeader:true
   },
   {
     title:'Política de privacidade',
-    url:'politica-de-privacidade',
+    url:'/politica-de-privacidade',
     component:<Policy/>,
     showOnHeader:false,
   },
   {
     title:'Termos e condições de uso',
-    url:'termos-e-condicoes-de-uso',
+    url:'/termos-e-condicoes-de-uso',
     component:<Terms/>,
     showOnHeader:false,
   },
