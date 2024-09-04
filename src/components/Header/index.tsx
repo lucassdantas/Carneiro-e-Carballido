@@ -17,7 +17,7 @@ export const Header = () => {
         </div>
 
         <div className='flex flex-col justify-center w-4/6'>
-          <ul className='flex gap-4 items-center font-bold justify-center text-white'>
+          <ul className='flex gap-4 items-center font-medium justify-center text-white'>
             {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url} key={page.url}><li>{page.title}</li></Link>})}
           </ul>
         </div>

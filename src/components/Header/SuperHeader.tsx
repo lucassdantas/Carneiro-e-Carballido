@@ -7,12 +7,12 @@ export const SuperHeader = () => {
   return (
     <div>
       <ScreenWidthLimiter>
-        <div className="flex items-center gap-4">
-          <div className='flex items-center gap-2'>
-            <FaMapMarkerAlt/> <a href={address.url} target='_blank'>{address.value}</a>
+        <div className="flex items-center gap-8">
+          <div >
+            <a href={address.url}  target='_blank' className='flex items-center gap-2'> <FaMapMarkerAlt/> {address.value}</a>
           </div>
-          <div className='flex items-center gap-2'>
-            <BsWhatsapp/> <a href={whatsApp.url} target='_blank'>{whatsApp.value}</a>
+          <div>
+            <a href={whatsApp.url} target='_blank' className='flex items-center gap-2'> <BsWhatsapp/> {whatsApp.value}</a>
           </div>
         </div>
         <div className="flex items-center"></div>
