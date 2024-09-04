@@ -1,37 +1,61 @@
-import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
-import logo from '@/assets/logo-carneiro-e-carballido.png'
-import { pages, PageType } from '@/utils/constants/pages'
-import { Link } from 'react-router-dom'
-import { MdEmail } from 'react-icons/md'
-import { address, email, whatsApp } from '@/utils/constants/infos'
-import { BsWhatsapp } from 'react-icons/bs'
-import { FaAngleDoubleRight, FaAngleRight, FaMapMarkerAlt } from 'react-icons/fa'
+import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter';
+import logo from '@/assets/logo-carneiro-e-carballido.png';
+import { pages, PageType } from '@/utils/constants/pages';
+import { Link } from 'react-router-dom';
+import { MdEmail } from 'react-icons/md';
+import { address, email, whatsApp } from '@/utils/constants/infos';
+import { BsWhatsapp } from 'react-icons/bs';
+import { FaAngleRight, FaMapMarkerAlt } from 'react-icons/fa';
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <footer className='w-full bg-blue-carneiro-e-carballido text-white'>
       <ScreenWidthLimiter>
-        <div className='flex py-24'>
-          <div className='w-7/12 pr-[25%]'>
+        <div className='flex flex-col md:flex-row py-12 md:py-24'>
+          <div className='w-full md:w-7/12 md:pr-[25%] mb-8 md:mb-0'>
             <Link to='/'>
-              <img src={logo} alt='logotipo'/>
+              <img src={logo} alt='logotipo' className='max-w-[200px] md:max-w-none'/>
             </Link>
-            <p className='mt-4'>Lorem ipsum dolor sit amet, consectetur</p>
+            <p className='mt-4 text-center md:text-left'>Lorem ipsum dolor sit amet, consectetur</p>
           </div>
-          <div className='w-3/12'>
-            <h4 className='text-2xl mb-4 font-bold'>Menu</h4>
-            <ul className='flex flex-col gap-2'>
-              {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url} key={page.url}><li className='flex items-center gap-1'> <FaAngleRight/>{page.title}</li></Link>})}
+          <div className='w-full md:w-3/12 mb-8 md:mb-0'>
+            <h4 className='text-2xl mb-4 font-bold text-center md:text-left'>Menu</h4>
+            <ul className='flex flex-col gap-2 items-center md:items-start'>
+              {pages.map((page: PageType) => {
+                if (page.showOnHeader)
+                  return (
+                    <Link to={page.url} key={page.url}>
+                      <li className='flex items-center gap-1'>
+                        <FaAngleRight />
+                        {page.title}
+                      </li>
+                    </Link>
+                  );
+              })}
             </ul>
           </div>
-          <div className='w-4/12'>
-            <h4 className='text-2xl font-bold mb-4'>Contato</h4>
-          
-            <ul className='flex flex-col gap-2'>
-              <li><a href={email.url} className='flex gap-2 items-center'><MdEmail className='text-lg'/>{email.value}</a></li>
-              <li><a href={whatsApp.url} className='flex gap-2 items-center'><BsWhatsapp className='text-lg'/>{whatsApp.value}</a></li>
-              <li><a href={address.url} className='flex gap-2 items-center'><FaMapMarkerAlt className='text-2xl'/>{address.value}</a></li>
+          <div className='w-full md:w-4/12'>
+            <h4 className='text-2xl font-bold mb-4 text-center md:text-left'>Contato</h4>
+            <ul className='flex flex-col gap-2 items-center md:items-start'>
+              <li>
+                <a href={email.url} className='flex gap-2 items-center'>
+                  <MdEmail className='text-lg' />
+                  {email.value}
+                </a>
+              </li>
+              <li>
+                <a href={whatsApp.url} className='flex gap-2 items-center'>
+                  <BsWhatsapp className='text-lg' />
+                  {whatsApp.value}
+                </a>
+              </li>
+              <li>
+                <a href={address.url} className='flex gap-2 items-center'>
+                  <FaMapMarkerAlt className='text-2xl' />
+                  {address.value}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -40,5 +64,5 @@ export const Footer = () => {
         </div>
       </ScreenWidthLimiter>
     </footer>
-  )
-}
+  );
+};

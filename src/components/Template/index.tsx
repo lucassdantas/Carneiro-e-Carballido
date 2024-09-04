@@ -21,7 +21,6 @@ export const Template = ({children, pageTitle}:TemplateProps) => {
         </ScreenWidthLimiter>
       </main>
       <FloatWppButton/>
-
       <Footer/>
     </>
   )
