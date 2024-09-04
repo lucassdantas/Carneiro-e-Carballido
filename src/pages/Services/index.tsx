@@ -7,5 +7,3 @@ export const Services = () => {
     </Template>
   )
 }
-
-export default Services

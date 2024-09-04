@@ -39,19 +39,19 @@ export const Footer = () => {
             <h4 className='text-2xl font-bold mb-4 text-center md:text-left'>Contato</h4>
             <ul className='flex flex-col gap-2 items-center md:items-start'>
               <li>
-                <a href={email.url} className='flex gap-2 items-center'>
+                <a href={email.url} target='_blank' className='flex gap-2 items-center'>
                   <MdEmail className='text-lg' />
                   {email.value}
                 </a>
               </li>
               <li>
-                <a href={whatsApp.url} className='flex gap-2 items-center'>
+                <a href={whatsApp.url} target='_blank' className='flex gap-2 items-center'>
                   <BsWhatsapp className='text-lg' />
                   {whatsApp.value}
                 </a>
               </li>
               <li>
-                <a href={address.url} className='flex gap-2 items-center'>
+                <a href={address.url} target='_blank' className='flex gap-2 items-center'>
                   <FaMapMarkerAlt className='text-2xl' />
                   {address.value}
                 </a>
