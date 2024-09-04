@@ -3,10 +3,12 @@ import { Button } from '@/components/Button'
 import { pages, PageType } from '@/utils/constants/pages'
 import { Link } from 'react-router-dom'
 import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
+import { SuperHeader } from '@/components/Header/SuperHeader'
 
 export const Header = () => {
   return (
-    <header className='-mb-24'>
+    <header className='-mb-[150px] text-white'>
+      <SuperHeader/>
       <ScreenWidthLimiter className='flex items-center'>
         <div className='flex flex-col justify-center w-1/6'>
           <img src={logo} alt='Logotipo' className='max-w-[250px]'/>
