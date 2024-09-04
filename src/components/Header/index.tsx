@@ -11,12 +11,14 @@ export const Header = () => {
       <SuperHeader/>
       <ScreenWidthLimiter className='flex items-center'>
         <div className='flex flex-col justify-center w-1/6'>
-          <img src={logo} alt='Logotipo' className='max-w-[250px]'/>
+          <Link to='/'>
+            <img src={logo} alt='Logotipo' className='max-w-[250px]'/>
+          </Link>
         </div>
 
         <div className='flex flex-col justify-center w-4/6'>
           <ul className='flex gap-4 items-center font-bold justify-center text-white'>
-            {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url}><li>{page.title}</li></Link>})}
+            {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url} key={page.url}><li>{page.title}</li></Link>})}
           </ul>
         </div>
 

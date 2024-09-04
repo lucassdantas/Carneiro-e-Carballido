@@ -12,7 +12,7 @@ export const address:CustomerInfo = {
   url:'https://www.google.com/maps/dir//carneiro+e+carballido/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x997f60863134a1:0xfaab42b35519cdd6?sa=X&ved=1t:3061&ictx=111'
 }
 
-export const email = {
+export const email:CustomerInfo = {
   value:'contato@cecconsultores.com.br',
   url:'mailto:contato@cecconsultores.com.br'
 }

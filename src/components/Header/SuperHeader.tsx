@@ -12,7 +12,7 @@ export const SuperHeader = () => {
             <FaMapMarkerAlt/> <a href={address.url} target='_blank'>{address.value}</a>
           </div>
           <div className='flex items-center gap-2'>
-            <BsWhatsapp/> <a href={whatsApp.url}>{whatsApp.value}</a>
+            <BsWhatsapp/> <a href={whatsApp.url} target='_blank'>{whatsApp.value}</a>
           </div>
         </div>
         <div className="flex items-center"></div>
