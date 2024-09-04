@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 import { Home } from '@/pages/Home';
 import { About } from "@/pages/About";
-import Services from "@/pages/Services";
-import Contact from "@/pages/Contact";
-import Policy from "@/pages/Policy";
-import Terms from "@/pages/Terms";
+import {Services} from "@/pages/Services";
+import {Contact} from "@/pages/Contact";
+import {Policy} from "@/pages/Policy";
+import {Terms} from "@/pages/Terms";
 
 export type PageType = {
   title:string;

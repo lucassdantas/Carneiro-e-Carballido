@@ -13,15 +13,14 @@ export const Template = ({children, pageTitle}:TemplateProps) => {
     <>
       <Header/>
       <main>
-        <section className='w-full bg-gray-500 text-center flex flex-col items-center justify-center text-bold text-white lg:min-h-[450px]'>
-          <span className='text-2xl font-bold'>{pageTitle}</span>
+        <section className='w-full bg-gray-800 text-center pt-12 flex flex-col items-center justify-center text-bold text-white lg:min-h-[450px] bg-gradient-to-b from-blue-carneiro-e-carballido '>
+          <span className='text-4xl font-bold'>{pageTitle}</span>
         </section>
         <ScreenWidthLimiter>
           {children}
         </ScreenWidthLimiter>
       </main>
       <FloatWppButton/>
-
       <Footer/>
     </>
   )

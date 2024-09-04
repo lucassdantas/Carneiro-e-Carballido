@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {pages.map((page:PageType) => <Route path={page.url} element={page.component} />)}
+        {pages.map((page:PageType) => <Route path={page.url} element={page.component} key={page.url} />)}
       </Routes>
     </Router>
   )

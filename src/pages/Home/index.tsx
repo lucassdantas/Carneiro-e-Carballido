@@ -7,5 +7,3 @@ export const Home = () => {
     </Template>
   )
 }
-
-export default Home

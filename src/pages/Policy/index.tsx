@@ -7,5 +7,3 @@ export const Policy = () => {
     </>
   )
 }
-
-export default Policy
