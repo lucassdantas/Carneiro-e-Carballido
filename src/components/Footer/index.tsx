@@ -32,7 +32,7 @@ export const Footer = () => {
                       </li>
                     </Link>
                   );
-              })}
+                })}
             </ul>
           </div>
           <div className='w-full md:w-4/12'>
@@ -59,8 +59,14 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className='text-center pb-2'>
-          <span>© {currentYear} - Carneiro e Carballido - Todos os direitos reservados</span>
+        <div className='  flex flex-col justify-center items-center w-full gap-2'>
+          <div className="flex justify-center w-full text-center">
+            <span>© {currentYear} - Carneiro e Carballido - Todos os direitos reservados</span>
+          </div>
+          <div className="flex justify-center w-full text-center gap-4">
+            <Link to='/politica-de-privacidade' className='flex gap-2 items-center text-sm'>Política de privacidade</Link>
+            <Link to='/termos-e-condicoes' className='flex gap-2 items-center text-sm'> Termos e condições</Link>
+          </div>
         </div>
       </ScreenWidthLimiter>
     </footer>

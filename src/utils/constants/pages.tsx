@@ -45,7 +45,7 @@ export const pages:PageType[] = [
   },
   {
     title:'Termos e condições de uso',
-    url:'/termos-e-condicoes-de-uso',
+    url:'/termos-e-condicoes',
     component:<Terms/>,
     showOnHeader:false,
   },
