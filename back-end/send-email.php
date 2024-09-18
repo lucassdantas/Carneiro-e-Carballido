@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->SMTPAuth   = true;
                 $mail->Username   = $emailLogin; 
                 $mail->Password   = $emailPassword; 
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->SMTPSecure = $emailSecure;
                 $mail->Port       = $emailPort; 
 
                 
