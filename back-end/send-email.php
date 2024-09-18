@@ -22,18 +22,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $mail = new PHPMailer(true);
 
             try {
-
+                include_once './emailCredentials.php';
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.gmail.com'; 
+                $mail->Host       = $emailHost; 
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'email'; 
-                $mail->Password   = 'senha'; 
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port       = 587; 
+                $mail->Username   = $emailLogin; 
+                $mail->Password   = $emailPassword; 
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                $mail->Port       = $emailPort; 
 
                 
-                $mail->setFrom('email do remetente', 'Ciclano');
-                $mail->addAddress('email do destinatário', 'Fulano'); 
+                $mail->setFrom($emailLogin, 'Ciclano');
+                $mail->addAddress('lucasdantasprogramador@gmail.com', 'Fulano'); 
 
                 
                 $mail->isHTML(true); 
