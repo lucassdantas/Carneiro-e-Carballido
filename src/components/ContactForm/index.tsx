@@ -1,6 +1,7 @@
 import { FormButton } from '@/components/Button';
 import React, { useState } from 'react';
 import axios from "axios";
+import { backendUrl } from '@/utils/constants/siteInfos';
 
 export const ContactForm = () => {
   const [nome, setNome] = useState('');
@@ -24,7 +25,7 @@ export const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost/carneiro-e-carballido/back-end/send-email.php", formData);
+      const response = await axios.post(`${backendUrl}send-email.php`, formData);
       setResponseMessage(response.data.message);
     } catch (error) {
       setResponseMessage("There was an error sending the message.");
