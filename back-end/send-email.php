@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->Port       = $emailPort; 
 
                 
-                $mail->setFrom($emailLogin, 'Ciclano');
-                $mail->addAddress('lucasdantasprogramador@gmail.com', 'Fulano'); 
+                $mail->setFrom($emailLogin, 'Carneiro e Carballido');
+                $mail->addAddress('lucasdantasprogramador@gmail.com', $nome); 
 
                 
                 $mail->isHTML(true); 
