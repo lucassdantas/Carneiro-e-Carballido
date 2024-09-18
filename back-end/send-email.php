@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);
 
     if (!empty($data['nome']) && !empty($data['telefone']) && !empty($data['email']) && !empty($data['subject']) && !empty($data['message'])) {
-        $nome = htmlspecialchars($data['nome']);
-        $telefone = htmlspecialchars($data['telefone']);
+        $name = htmlspecialchars($data['nome']);
+        $phone = htmlspecialchars($data['telefone']);
         $email = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
         $subject = htmlspecialchars($data['subject']);
         $message = htmlspecialchars($data['message']);
@@ -33,15 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 
                 $mail->setFrom($emailLogin, 'Carneiro e Carballido');
-                $mail->addAddress('lucasdantasprogramador@gmail.com', $nome); 
+                $mail->addAddress('lucasdantasprogramador@gmail.com', $name); 
 
                 
                 $mail->isHTML(true); 
-                $mail->Subject = $subject . $nome;
+                $mail->Subject = $subject . $name;
                 $mail->Body    = "
                     <p><strong>Nova mensagem!</strong></p>
-                    <p><strong>Nome:</strong> $nome</p>
-                    <p><strong>Telefone:</strong> $telefone</p>
+                    <p><strong>Nome:</strong> $name</p>
+                    <p><strong>Telefone:</strong> $phone</p>
                     <p><strong>Email:</strong> $email</p>
                     <p><strong>Mensagem:</strong> $message</p>
                 ";
