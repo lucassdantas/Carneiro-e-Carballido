@@ -12,8 +12,21 @@ export const About = () => {
         </div>
         <div className="flex flex-col w-1/2 items-start">
           <SuperTitle content='Sobre nós' className='mb-2'/>
-          <h2 className='text-4xl mb-4'>Simplifique suas finanças com profissionais especializados</h2>
-          <p className='mb-4'>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fugit ullam aliquid enim facilis odio obcaecati quasi dolorum commodi! Quo veniam eaque excepturi et placeat nihil? Sit commodi suscipit officiis!</p>
+          <h2 className='text-4xl mb-4'>Nós somos a Carneiro & Carbalido</h2>
+          <p className='mb-4'>Transformamos a contabilidade em uma vantagem estratégica</p>
+          <img src={''} alt='Imagem carneiro e carballido'/>
+          <Button/>
+        </div>
+      </section>
+      <section className='flex py-12 items-center gap-12'>
+        <div className="flex flex-col w-1/2 items-center">
+          <div className="bg-gray-700 h-[450px] w-full rounded-xl"></div>
+        </div>
+        <div className="flex flex-col w-1/2 items-start">
+          <SuperTitle content='Sobre nós' className='mb-2'/>
+          <h2 className='text-4xl mb-4'>Nós somos a Carneiro & Carbalido</h2>
+          <p className='mb-4'>Transformamos a contabilidade em uma vantagem estratégica</p>
+          <img src={''} alt='Imagem carneiro e carballido'/>
           <Button/>
         </div>
       </section>
