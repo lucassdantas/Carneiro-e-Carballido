@@ -5,12 +5,14 @@ import { BsWhatsapp } from 'react-icons/bs';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { SuperTitle } from '@/components/Titles/SuperTitle';
 import { ContactForm } from '@/components/ContactForm';
+import { Hero } from '@/components/Hero';
 
 export const Contact = () => {
   
   return (
     <Template pageTitle='Contato'>
-      <section className='flex py-12 items-center gap-12'>
+      <Hero pageTitle='Contato'/>
+      <section className='flex py-12 px-40 items-center gap-12'>
         <div className="flex flex-col w-1/2">
           <SuperTitle content='Continue conectado conosco' className='mb-2'/>
           <h2 className='text-4xl mb-4'>Fale conosco para uma solução personalizada</h2>
