@@ -14,11 +14,7 @@ export const Template = ({children, pageTitle}:TemplateProps) => {
   return (
     <>
       <Header/>
-      <main>
-        <ScreenWidthLimiter>
-          {children}
-        </ScreenWidthLimiter>
-      </main>
+      <main className='flex flex-col items-center'>{children}</main>
       <FloatWppButton/>
       <Footer/>
     </>
