@@ -9,7 +9,10 @@ export default {
       colors:{
         'green-wpp':'#25D366',
         'yellow-carneiro-e-carballido':'#fbc848',
-        'blue-carneiro-e-carballido':'#337a97'
+        'blue-carneiro-e-carballido':'#337a97',
+        'dark-blue': '#002936',
+        'dark-yellow': '#725915',
+        'light-gray': '#EBEBEB'
       }
     },
   },

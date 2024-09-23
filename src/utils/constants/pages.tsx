@@ -19,18 +19,22 @@ export const pages:PageType[] = [
     component:<Home/>,
     showOnHeader:true
   },
-  {
-    title:'Sobre',
-    url:'/sobre',
-    component:<About/>,
-    showOnHeader:true
-  },
+  
   {
     title:'Serviços',
     url:'/servicos',
     component:<Services/>,
     showOnHeader:true
   },
+
+
+  {
+    title:'Conheça a CeC',
+    url:'/conheca-a-cec',
+    component:<About/>,
+    showOnHeader:true
+  },
+
   {
     title:'Contato',
     url:'/contato',

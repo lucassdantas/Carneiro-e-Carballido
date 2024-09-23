@@ -7,12 +7,12 @@ import { SuperHeader } from '@/components/Header/SuperHeader'
 
 export const DesktopHeader = () => {
   return (
-    <header className='-mb-[150px] text-white'>
+    <header className='flex flex-col gap-5 -mb-[180px] relative bg-transparent px-40 py-5 text-white'>
       <SuperHeader/>
       <ScreenWidthLimiter className='flex items-center'>
-        <div className='flex flex-col justify-center w-1/6'>
+        <div className='flex flex-col justify-center w-2/6'>
           <Link to='/'>
-            <img src={logo} alt='Logotipo' className='max-w-[250px]'/>
+            <img src={logo} alt='Logotipo' className='max-w-[280px]'/>
           </Link>
         </div>
 
