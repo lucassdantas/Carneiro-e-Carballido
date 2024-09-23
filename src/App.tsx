@@ -3,6 +3,7 @@ import { pages, PageType } from '@/utils/constants/pages';
 import './App.css'
 
 function App() {
+  
   return (
     <Router>
       <Routes>

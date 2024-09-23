@@ -10,7 +10,7 @@ import { FaAngleRight, FaMapMarkerAlt } from 'react-icons/fa';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className='w-full bg-dark-blue text-white px-40'>
+    <footer className='w-full bg-dark-blue text-white px-40 py-12'>
       <ScreenWidthLimiter>
         <div className='flex flex-col md:flex-row py-12 md:py-24'>
           <div className='w-full md:w-7/12 md:pr-[25%] mb-8 md:mb-0'>
