@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 
                 $mail->isHTML(true); 
-                $mail->Subject = $subject . $name;
+                $mail->Subject = $subject. ' - ' . $name;
                 $mail->Body    = "
                     <p><strong>Nova mensagem!</strong></p>
                     <p><strong>Nome:</strong> $name</p>
