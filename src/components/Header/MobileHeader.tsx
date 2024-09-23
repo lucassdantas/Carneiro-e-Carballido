@@ -13,7 +13,7 @@ export const MobileHeader = () => {
   };
 
   return (
-    <header className='bg-primary p-4 text-white'>
+    <header className=' relative z-10 bg-primary p-4 text-white'>
       <div className='flex justify-between items-center'>
         <Link to='/'>
           <img src={logo} alt='Logotipo' className='h-8'/>
