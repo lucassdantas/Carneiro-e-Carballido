@@ -97,6 +97,6 @@ export const services:Services[] = [
       'Emissão das guias de recolhimento de impostos',
       'Obtenção de alvará para autônomo',
     ],
-    resume: ''
+    resume: 'Atuamos na regularização fiscal e tributária para pessoas físicas, proporcionando segurança no cumprimento das obrigações e suporte especializado.'
   },
 ]
