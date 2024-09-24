@@ -17,7 +17,7 @@ import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter';
 
 export const Home = () => {
   return (
-    <Template pageTitle="Home">
+    <Template pageTitle="Home" floatingHeader={true}>
       <section
         className=" h-screen p-40 bg-no-repeat bg-cover  flex gap-10 items-center  "
         style={{ backgroundImage: `url(${manImage})`  }} 

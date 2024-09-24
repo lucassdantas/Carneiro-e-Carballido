@@ -2,18 +2,16 @@ import React, { ReactNode } from 'react'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { FloatWppButton } from '@/components/FloatWppButton'
-import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
-
-
 
 type TemplateProps = {
   children:ReactNode;
   pageTitle:string;
+  floatingHeader:boolean;
 }
-export const Template = ({children, pageTitle}:TemplateProps) => {
+export const Template = ({children, pageTitle, floatingHeader=false}:TemplateProps) => {
   return (
     <>
-      <Header/>
+      <Header isFloatingHeader={floatingHeader}/>
       <main className='flex flex-col items-center'>{children}</main>
       <FloatWppButton/>
       <Footer/>
