@@ -60,6 +60,7 @@ export const Home = () => {
           <div className="flex flex-col w-1/2 items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
             <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
+            <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
             <Button/>
           </div>
           <div className="flex flex-col w-1/2 items-center">
