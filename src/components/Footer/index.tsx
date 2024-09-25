@@ -6,22 +6,23 @@ import { MdEmail } from 'react-icons/md';
 import { address, email, whatsApp } from '@/utils/constants/infos';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FaAngleRight, FaMapMarkerAlt } from 'react-icons/fa';
+import { Section } from '@/components/Section';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className='w-full bg-dark-blue text-white px-40 py-12'>
-      <ScreenWidthLimiter>
-        <div className='flex flex-col md:flex-row py-12 md:py-24'>
-          <div className='w-full md:w-7/12 md:pr-[25%] mb-8 md:mb-0'>
+    <footer className='w-full bg-dark-blue text-white lg:px-40 py-12'>
+      <Section>
+        <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
+          <div className='w-full flex flex-col items-center lg:items-start  lg:w-7/12 lg:pr-[25%] mb-8 lg:mb-0'>
             <Link to='/'>
-              <img src={logo} alt='logotipo' className='max-w-[200px] md:max-w-none'/>
+              <img src={logo} alt='logotipo' className='max-w-[200px] lg:max-w-none'/>
             </Link>
-            <p className='mt-4 text-center md:text-left'>Lorem ipsum dolor sit amet, consectetur</p>
+            <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade e Consultoria Fiscal e tributária </p>
           </div>
-          <div className='w-full md:w-3/12 mb-8 md:mb-0'>
-            <h4 className='text-2xl mb-4 font-bold text-center md:text-left'>Menu</h4>
-            <ul className='flex flex-col gap-2 items-center md:items-start'>
+          <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>
+            <h4 className='text-2xl mb-4 font-bold text-center lg:text-left'>Menu</h4>
+            <ul className='flex flex-col gap-2 items-center lg:items-start'>
               {pages.map((page: PageType) => {
                 if (page.showOnHeader)
                   return (
@@ -35,9 +36,9 @@ export const Footer = () => {
                 })}
             </ul>
           </div>
-          <div className='w-full md:w-4/12'>
-            <h4 className='text-2xl font-bold mb-4 text-center md:text-left'>Contato</h4>
-            <ul className='flex flex-col gap-2 items-center md:items-start'>
+          <div className='w-full lg:w-4/12'>
+            <h4 className='text-2xl font-bold mb-4 text-center lg:text-left'>Contato</h4>
+            <ul className='flex flex-col gap-2 items-center lg:items-start'>
               <li>
                 <a href={email.url} target='_blank' className='flex gap-2 items-center'>
                   <MdEmail className='text-lg' />
@@ -68,7 +69,7 @@ export const Footer = () => {
             <Link to='/termos-e-condicoes' className='flex gap-2 items-center text-sm'> Termos e condições</Link>
           </div>
         </div>
-      </ScreenWidthLimiter>
+      </Section>
     </footer>
   );
 };

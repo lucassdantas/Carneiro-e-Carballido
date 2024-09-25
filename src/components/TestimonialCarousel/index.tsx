@@ -62,8 +62,8 @@ export const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto px-32 rounded-lg ">
-      <div className="flex space-x-4">
+    <div className="relative w-full mx-auto rounded-lg ">
+      <div className="flex lg:flex-row flex-col items-center space-x-4">
         {testimonials.slice(currentIndex, currentIndex + 3).map((testimonial, index) => (
           <div key={index} className="flex-1 p-4 border rounded-lg bg-white shadow">
             <img

@@ -16,9 +16,9 @@ import { SuperTitle } from '@/components/Titles/SuperTitle';
 export const Home = () => {
   return (
     <Template pageTitle="Home" transparentHeader={true}>
-      <Section className="h-screen p-40 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
+      <Section className="lg:h-screen lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
         <div className='flex flex-col gap-10'>
-          <div className='w-1/2 text-white'>
+          <div className='lg:w-1/2 w-full text-white'>
             <SuperTitle content='Cec Consultores' color='white' className='mb-8'/>
             <h1 className="text-white text-4xl font-bold my-4">Contabilidade da sua empresa de forma prática, segura e econômica</h1>
             <p>Tenha a praticidade de uma contabilidade digital com a credibilidade de um atendimento humanizado.</p>
@@ -33,7 +33,7 @@ export const Home = () => {
         <div className='text-center'>
           <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
         </div>
-        <div className='flex gap-10 mt-10'>
+        <div className='flex  lg:flex-row flex-col items-center  gap-10 mt-10'>
           {services.map((service, i) => {
             if(i>2) return null
             return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
@@ -55,15 +55,15 @@ export const Home = () => {
 
       </Section>
 
-      <Section className='flex py-12 items-center gap-12'>
-        <div className='flex py-12 items-center gap-12'>
-          <div className="flex flex-col w-1/2 items-start">
+      <Section className='py-12 gap-12'>
+        <div className='flex lg:flex-row flex-col py-12 items-center gap-12'>
+          <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
             <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
             <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
             <Button/>
           </div>
-          <div className="flex flex-col w-1/2 items-center">
+          <div className="flex flex-col lg:w-1/2 w-full items-center">
             <img className='w-full h-[512px] object-cover rounded-lg shadow-lg' src={aboutImg} alt="Imagem sobre a empresa" />
           </div>
         </div>
