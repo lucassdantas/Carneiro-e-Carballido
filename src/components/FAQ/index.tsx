@@ -62,7 +62,9 @@ export const FAQ = () => {
             <span className="ml-2 ">{openIndex === index ? '-' : '+'}</span>
           </button>
           <div className={`overflow-hidden transition-[max-height]  ${openIndex === index ? 'max-h-96' : 'max-h-0'}`}>
-            <p className="mt-2 text-gray-600 text-1xl">{item.answer}</p>
+            {item.answer.map((answer, i) => (
+              <p className="mt-2 text-gray-600 text-1xl" key={'answer-'+i}>{answer}</p>
+            ))}
           </div>
         </li>
       ))}
