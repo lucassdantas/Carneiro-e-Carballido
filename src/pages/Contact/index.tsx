@@ -52,7 +52,6 @@ export const Contact = () => {
             </div>
             <div className="flex flex-col lg:w-1/2 w-full">
               <h2 className='text-4xl mb-4'>Envie uma mensagem</h2>
-              <p className='mb-4'>Lorem ipsum</p>
               <ContactForm/>
             </div>
           </div>

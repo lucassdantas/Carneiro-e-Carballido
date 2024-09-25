@@ -1,4 +1,5 @@
 import { whatsApp } from "@/utils/constants/infos";
+import { Link } from "react-router-dom";
 
 type ButtonProps = {
   content?:string;
@@ -11,8 +12,8 @@ type ButtonProps = {
 export const Button = ({content='Fale conosco', color='yellow', url, target='_blank'}:ButtonProps) => {
   if(!url) url = whatsApp.url
   
-  if(color=='yellow') return <a href={url} target={target} ><div className={`rounded-md p-4 text-center font-bold cursor-pointer transition ease-in-out hover:scale-110 duration-300 hover:bg-blue-carneiro-e-carballido  hover:text-white text-black bg-yellow-carneiro-e-carballido shadow-lg`}>{content}</div></a>
-  if(color=='blue')   return <a href={url} target={target} ><div className={`rounded-md p-4 text-center font-bold cursor-pointer transition ease-in-out hover:scale-110 duration-300 hover:bg-yellow-carneiro-e-carballido hover:text-black text-white bg-blue-carneiro-e-carballido  shadow-lg`}>{content}</div></a>
+  if(color=='yellow') return <Link to={url} target={target} ><div className={`rounded-md p-4 text-center font-bold cursor-pointer transition ease-in-out hover:scale-110 duration-300 hover:bg-blue-carneiro-e-carballido  hover:text-white text-black bg-yellow-carneiro-e-carballido shadow-lg`}>{content}</div></Link>
+  if(color=='blue')   return <Link to={url} target={target} ><div className={`rounded-md p-4 text-center font-bold cursor-pointer transition ease-in-out hover:scale-110 duration-300 hover:bg-yellow-carneiro-e-carballido hover:text-black text-white bg-blue-carneiro-e-carballido  shadow-lg`}>{content}</div></Link>
 }
 export const ServiceCardButton = ({content='Fale conosco', color='yellow', }:ButtonProps) => {
   if(color=='yellow') return <div className={`rounded-md p-4 text-center font-bold cursor-pointer transition ease-in-out hover:scale-110 duration-300 hover:bg-blue-carneiro-e-carballido  hover:text-white text-black bg-yellow-carneiro-e-carballido shadow-lg`}>{content}</div>
