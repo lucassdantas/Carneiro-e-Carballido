@@ -1,5 +1,5 @@
 import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 type SectionProps = {
   children:ReactNode, 

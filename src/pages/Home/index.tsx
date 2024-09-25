@@ -11,6 +11,7 @@ import { ServicesCard } from '@/components/ServicesCard';
 import { FAQ } from '@/components/FAQ';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { Section } from '@/components/Section';
+import { services } from '@/utils/services';
 
 
 
@@ -39,19 +40,11 @@ export const Home = () => {
           <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
           </div>
           <div className=' flex  gap-10 mt-10'>
+          {services.map((service, i) => {
+            if(i>2) return null
+            return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
+          })}
 
-          <ServicesCard serviceTitle='Consultoria Empresarial e Tributária' imgUrl={businessService} >
-            A consultoria empresarial e tributária é essencial para empresas que buscam otimizar suas operações e melhorar a eficiência fiscal.
-          </ServicesCard>
-
-          <ServicesCard serviceTitle='Contabilidade' imgUrl={accountingService}>
-            Área responsável por todo o processamento, registro e análise das informações e documentos da empresa, necessários para a elaboração de relatórios gerenciais que serão utilizados pelos gestores.
-          </ServicesCard>
-
-
-          <ServicesCard serviceTitle='Abertura e Legalização de Empresas' imgUrl={companiesService}>
-            A abertura de uma empresa necessita de todo um processo legal a ser seguido. É a parte de registro da empresa nos órgãos competentes. É o nascimento da sua empresa.
-          </ServicesCard>
           </div>
           <div className='mt-12 w-full text-center px-[25%]'>
             <Button url={'/servicos'} content='Saiba mais' target='' />
