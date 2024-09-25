@@ -5,6 +5,7 @@ import { services } from '@/utils/services';
 import { useState } from 'react';
 import { ServiceType } from '@/types/services';
 import { Button } from '@/components/Button';
+import { ServicePopup } from '@/components/servicePopup';
 
 export const Services = () => {
   const [isPopupOpen, setIspopupOpen] = useState(false);
@@ -43,37 +44,7 @@ export const Services = () => {
         </div>
       </section>
 
-      {isPopupOpen && selectedService && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg max-w-md w-full relative">
-            {/* Imagem do serviço */}
-            <img className="w-full h-48 object-cover rounded-md" src={selectedService.img} alt={selectedService.title} />
-
-            {/* Título do serviço */}
-            <h2 className="text-2xl font-bold mt-4">{selectedService.title}</h2>
-
-            {/* Tópicos do serviço */}
-            <ul className="mt-4 list-disc list-inside">
-              {selectedService.topics.map((topic, index) => (
-                <li key={index} className="text-gray-700">{topic}</li>
-              ))}
-            </ul>
-
-            {/* Botão */}
-            <div className="mt-6">
-              <Button />
-            </div>
-
-            {/* Botão de Fechar */}
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-              onClick={handleClosePopup}
-            >
-              &times;
-            </button>
-          </div>
-        </div>
-      )}
+      {isPopupOpen && selectedService && <ServicePopup selectedService={selectedService} handleClosePopup={handleClosePopup}/>}
     </Template>
   );
 };
