@@ -4,12 +4,13 @@ import { ReactNode } from 'react'
 type SectionProps = {
   children:ReactNode, 
   className?:string,
-  bgImg?:string;
+  bgImg?:string,
+  limiterClassName?:string,
 }
-export const Section = ({children, className='', bgImg}:SectionProps) => {
+export const Section = ({children, className='', limiterClassName='', bgImg}:SectionProps) => {
   return (
-  <section className={`${className}`} style={bgImg?{ backgroundImage: `url(${bgImg})` }:{}}>
-    <ScreenWidthLimiter>{children}</ScreenWidthLimiter>
+  <section className={`w-full ${className}`} style={bgImg?{ backgroundImage: `url(${bgImg})` }:{}}>
+    <ScreenWidthLimiter className={limiterClassName}>{children}</ScreenWidthLimiter>
   </section>
   )
 }

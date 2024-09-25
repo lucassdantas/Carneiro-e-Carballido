@@ -37,14 +37,13 @@ export const Home = () => {
       </section>
         <Section className='relative flex flex-col items-center justify-center py-10 '>
           <div className='text-center'>
-          <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
+            <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
           </div>
-          <div className=' flex  gap-10 mt-10'>
-          {services.map((service, i) => {
-            if(i>2) return null
-            return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
-          })}
-
+          <div className='flex gap-10 mt-10'>
+            {services.map((service, i) => {
+              if(i>2) return null
+              return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
+            })}
           </div>
           <div className='mt-12 w-full text-center px-[25%]'>
             <Button url={'/servicos'} content='Saiba mais' target='' />
@@ -62,19 +61,22 @@ export const Home = () => {
 
         </Section>
 
-        <Section className='flex  py-12 items-center gap-12'>
-          <div className="flex flex-col w-1/2 items-start">
-            <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
-            <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
-            <Button/>
-          </div>
-          <div className="flex flex-col w-1/2 items-center">
-          <img className='w-full h-auto rounded-lg shadow-lg' src={aboutImg} alt="Imagem sobre a empresa" />
+        <Section className='flex py-12 items-center gap-12'>
+          <div className='flex py-12 items-center gap-12'>
+            <div className="flex flex-col w-1/2 items-start">
+              <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
+              <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
+              <Button/>
+            </div>
+            <div className="flex flex-col w-1/2 items-center">
+              <img className='w-full h-auto rounded-lg shadow-lg' src={aboutImg} alt="Imagem sobre a empresa" />
+            </div>
           </div>
         </Section>
 
 
-        <Section className='bg-light-gray'>
+        <Section className='bg-light-gray py-10'>
+          <h2 className="text-4xl  text-center mb-6 font-semibold">Perguntas Frequentes</h2>
           <FAQ/>
         </Section>
 
