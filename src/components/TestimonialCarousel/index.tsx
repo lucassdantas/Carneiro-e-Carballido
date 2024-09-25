@@ -89,10 +89,10 @@ export const TestimonialCarousel = () => {
         ))}
       </div>
       
-      <button onClick={prevTestimonial} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition">
+      <button onClick={prevTestimonial} className="absolute left-0 -ml-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition ">
         &lt;
       </button>
-      <button onClick={nextTestimonial} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition">
+      <button onClick={nextTestimonial} className="absolute right-0 -mr-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition ">
         &gt;
       </button>
     </div>

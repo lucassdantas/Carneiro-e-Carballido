@@ -75,29 +75,31 @@ export const Home = () => {
         <FAQ/>
       </Section>
 
-      <Section className='flex flex-col items-center gap-5 w-full py-10'>
-        <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
-        <h3 className='text-2xl font-semibold'>Excelente</h3>
-        <div className="flex">
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
+      <Section className='gap-5 py-10'>
+        <div className="flex flex-col items-center justify-center">
+          <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
+          <h3 className='text-2xl font-semibold mt-4'>Excelente</h3>
+          <div className="flex">
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <p>Com base em 5 avaliações</p>
+          <img className='w-24' src={googleLogo} alt="Google Logo" />
+          <TestimonialCarousel/>
         </div>
-        <p>Com base em 5 avaliações</p>
-        <img className='w-24' src={googleLogo} alt="Google Logo" />
-        <TestimonialCarousel/>
       </Section>
     </Template>
   )
