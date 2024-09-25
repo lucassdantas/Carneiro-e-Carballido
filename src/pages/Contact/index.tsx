@@ -14,7 +14,7 @@ export const Contact = () => {
     <Template pageTitle='Contato'>
       <Hero pageTitle='Contato'/>
       <ScreenWidthLimiter>
-        <section className='flex py-12 px-40 items-center gap-12'>
+        <section className='flex py-12 items-center gap-12'>
           <div className="flex flex-col w-1/2">
             <SuperTitle content='Continue conectado conosco' className='mb-2'/>
             <h2 className='text-4xl mb-4'>Fale conosco para uma solução personalizada</h2>

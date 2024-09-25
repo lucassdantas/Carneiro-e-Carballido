@@ -6,9 +6,7 @@ export const Policy = () => {
     <Template pageTitle='Política de privacidade'>
       <Hero pageTitle='Política de privacidade'/>
       <div className="max-w-4xl mx-auto p-8">
-        <h2 className="text-4xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
-          Nossa Política de Privacidade
-        </h2>
+        <h2 className="text-4xl font-bold mb-4 border-b-2 border-gray-300 pb-2">Nossa Política de Privacidade</h2>
         <p className="mb-6 text-gray-700">Última atualização: 4 de setembro de 2024</p>
 
         <p className="mb-6 text-gray-700">

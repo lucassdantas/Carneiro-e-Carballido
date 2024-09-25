@@ -6,14 +6,16 @@ import { FloatWppButton } from '@/components/FloatWppButton'
 type TemplateProps = {
   children:ReactNode;
   pageTitle:string;
-  floatingHeader:boolean;
+  transparentHeader?:boolean;
 }
-export const Template = ({children, pageTitle, floatingHeader=false}:TemplateProps) => {
+export const Template = ({children, pageTitle, transparentHeader=false}:TemplateProps) => {
   return (
     <>
-      <Header isFloatingHeader={floatingHeader}/>
-      <main className='flex flex-col items-center'>{children}</main>
-      <FloatWppButton/>
+      <Header isTransparentHeader={transparentHeader}/>
+      <main className='flex flex-col items-center'>
+        {children}
+        <FloatWppButton/>
+      </main>
       <Footer/>
     </>
   )

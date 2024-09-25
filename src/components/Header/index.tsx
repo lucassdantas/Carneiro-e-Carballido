@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { MobileHeader } from './MobileHeader';
+import { DesktopTransparentHeader } from '@/components/Header/DesktopTransparentHeader';
 import { DesktopHeader } from '@/components/Header/DesktopHeader';
 
-export const Header = ({isFloatingHeader}:{isFloatingHeader:boolean}) => {
+export const Header = ({isTransparentHeader}:{isTransparentHeader:boolean}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
@@ -18,7 +19,7 @@ export const Header = ({isFloatingHeader}:{isFloatingHeader:boolean}) => {
 
   return (
     <>
-      {isMobile ? <MobileHeader /> : isFloatingHeader? <DesktopHeader/> : <DesktopHeader/>}
+      {isMobile ? <MobileHeader /> : isTransparentHeader? <DesktopTransparentHeader/> : <DesktopHeader/>}
     </>
   );
 };

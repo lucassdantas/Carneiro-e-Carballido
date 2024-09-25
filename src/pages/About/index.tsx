@@ -9,11 +9,11 @@ export const About = () => {
     <Template pageTitle='Sobre'>
       <Hero pageTitle='Sobre'/>
       <ScreenWidthLimiter>
-        <section className='flex flex-col px-40 py-12  gap-12'>
+        <section className='flex flex-col py-12 gap-12'>
           <div><h1 className='text-dark-yellow'>Nós somos a Carneiro & Carbalido</h1></div>
           <div className='flex gap-28'>
             <div><h2 className=' text-4xl text-dark-blue font-semibold'>Transformamos a contabilidade em uma vantagem estratégica</h2></div>
-            <div><p className='px-40'>Um negócio de sucesso exige estratégia, táticas eficazes e decisões equilibradas. Confie em nossos serviços e foque no crescimento da sua empresa</p></div>
+            <div><p className=''>Um negócio de sucesso exige estratégia, táticas eficazes e decisões equilibradas. Confie em nossos serviços e foque no crescimento da sua empresa</p></div>
           </div>
           <div className='flex gap-20'>
             <div><img className='w-full h-auto rounded-lg shadow-lg' src={ourTeam} alt="Imagem sobre a empresa" /></div>
