@@ -2,20 +2,20 @@ import React, { ReactNode } from 'react'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { FloatWppButton } from '@/components/FloatWppButton'
-import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
-
-
 
 type TemplateProps = {
   children:ReactNode;
   pageTitle:string;
+  transparentHeader?:boolean;
 }
-export const Template = ({children, pageTitle}:TemplateProps) => {
+export const Template = ({children, pageTitle, transparentHeader=false}:TemplateProps) => {
   return (
     <>
-      <Header/>
-      <main className='flex flex-col items-center'>{children}</main>
-      <FloatWppButton/>
+      <Header isTransparentHeader={transparentHeader}/>
+      <main className='flex flex-col items-center'>
+        {children}
+        <FloatWppButton/>
+      </main>
       <Footer/>
     </>
   )

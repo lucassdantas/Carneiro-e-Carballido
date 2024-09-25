@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { MobileHeader } from './MobileHeader';
+import { DesktopTransparentHeader } from '@/components/Header/DesktopTransparentHeader';
 import { DesktopHeader } from '@/components/Header/DesktopHeader';
 
-export const Header = () => {
+export const Header = ({isTransparentHeader}:{isTransparentHeader:boolean}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
@@ -18,7 +19,7 @@ export const Header = () => {
 
   return (
     <>
-      {isMobile ? <MobileHeader /> : <DesktopHeader />}
+      {isMobile ? <MobileHeader /> : isTransparentHeader? <DesktopTransparentHeader/> : <DesktopHeader/>}
     </>
   );
 };

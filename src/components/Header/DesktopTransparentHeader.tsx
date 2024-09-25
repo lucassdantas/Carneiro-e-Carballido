@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter'
 import { SuperHeader } from '@/components/Header/SuperHeader'
 
-export const DesktopHeader = () => {
+export const DesktopTransparentHeader = () => {
   return (
-    <header className='flex flex-col gap-5 bg-white relative bg-transparent px-40 py-5'>
+    <header className='flex flex-col gap-5 -mb-[180px] relative bg-transparent px-40 py-5 text-white'>
       <SuperHeader/>
       <ScreenWidthLimiter className='flex items-center'>
         <div className='flex flex-col justify-center w-2/6'>
@@ -17,7 +17,7 @@ export const DesktopHeader = () => {
         </div>
 
         <div className='flex flex-col justify-center w-4/6'>
-          <ul className='flex gap-4 items-center font-medium justify-center'>
+          <ul className='flex gap-4 items-center font-medium justify-center text-white'>
             {pages.map((page:PageType) => { if(page.showOnHeader) return <Link to={page.url} key={page.url}><li>{page.title}</li></Link>})}
           </ul>
         </div>
@@ -26,6 +26,7 @@ export const DesktopHeader = () => {
           <Button/>
         </div>
       </ScreenWidthLimiter>
+      
     </header>
   )
 }
