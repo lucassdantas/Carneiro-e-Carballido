@@ -69,7 +69,7 @@ export const Home = () => {
               <Button/>
             </div>
             <div className="flex flex-col w-1/2 items-center">
-              <img className='w-full h-auto rounded-lg shadow-lg' src={aboutImg} alt="Imagem sobre a empresa" />
+              <img className='w-full h-[512px] object-cover rounded-lg shadow-lg' src={aboutImg} alt="Imagem sobre a empresa" />
             </div>
           </div>
         </Section>
