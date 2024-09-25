@@ -7,7 +7,7 @@ export const Header = ({isTransparentHeader}:{isTransparentHeader:boolean}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
+    setIsMobile(window.innerWidth < 968);
   };
 
   useEffect(() => {

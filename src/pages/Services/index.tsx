@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { ServiceType } from '@/types/services';
 import { Button } from '@/components/Button';
 import { ServicePopup } from '@/components/servicePopup';
+import { Section } from '@/components/Section';
 
 export const Services = () => {
   const [isPopupOpen, setIspopupOpen] = useState(false);
@@ -24,7 +25,7 @@ export const Services = () => {
   return (
     <Template pageTitle="Serviços">
       <Hero pageTitle="Serviços" />
-      <section className="flex flex-col items-center justify-center p-40 py-10">
+      <Section className="flex flex-col items-center justify-center py-10">
         <div className="text-center">
           <h2 className="text-4xl">Nossos serviços</h2>
         </div>
@@ -42,7 +43,7 @@ export const Services = () => {
             </ServicesCard>
           ))}
         </div>
-      </section>
+      </Section>
 
       {isPopupOpen && selectedService && <ServicePopup selectedService={selectedService} handleClosePopup={handleClosePopup}/>}
     </Template>
