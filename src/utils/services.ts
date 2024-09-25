@@ -1,9 +1,11 @@
-import { Services } from "@/types/services";
-import accountingService from '@/assets/image-accounting-service.jpg'
-import businessService from '@/assets/business-and-tax-consultancy-service-image.jpg'
-import companiesService from '@/assets/service-image-opening-and-legalization-of-companies.jpg'
-
-export const services:Services[] = [
+import { ServiceType } from "@/types/services";
+import accountingService from '@/assets/image-accounting-service.jpg';
+import businessService from '@/assets/business-and-tax-consultancy-service-image.jpg';
+import companiesService from '@/assets/service-image-opening-and-legalization-of-companies.jpg';
+import costAccountingServiceImage from '@/assets/Cost-Accounting-service-image.jpg';
+import personalDepartment from '@/assets/personnel-department-service-image.jpg';
+import regularizationImage from '@/assets/regularization-service-image.jpg';
+export const services:ServiceType[] = [
   {
     title:'Soluções Contábeis',
     img:accountingService,
@@ -52,7 +54,7 @@ export const services:Services[] = [
   },
   {
     title:'Departamento de Pessoal/RH (Soluções completas para Gestão de Pessoas e SST. Tudo para cuidar da sua equipe)',
-    img:'',
+    img:personalDepartment,
     topics:[
       'Admissão e Demissão: Contratação, integração, rescisão contratual e todos os trâmites legais.',
       'Consultoria Trabalhista: Orientação sobre legislação trabalhista, acordos coletivos e rotinas internas.',
@@ -68,7 +70,7 @@ export const services:Services[] = [
   },
   {
     title:'Soluções Fiscais',
-    img:'',
+    img:costAccountingServiceImage,
     topics:[
       'Acompanhamento da legislação fiscal',
       'Análise de custos',
@@ -94,7 +96,7 @@ export const services:Services[] = [
   },
   {
     title:'Soluções Para Gestão de Pessoas e SST',
-    img:'',
+    img:regularizationImage,
     topics:[
       'Admissão e Demissão: Contratação, integração, rescisão contratual e todos os trâmites legais.',
       'Consultoria Trabalhista: Orientação sobre legislação trabalhista, acordos coletivos e rotinas internas.',

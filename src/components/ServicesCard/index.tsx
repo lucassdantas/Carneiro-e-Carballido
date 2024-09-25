@@ -1,14 +1,17 @@
-import { Button } from '@/components/Button';
-import { ReactNode } from 'react';
+import { Button, ServiceCardButton } from '@/components/Button';
+import { ServiceType } from '@/types/services';
+import { ReactNode, useState } from 'react';
 
 type ServicesCardProps = {
   children: ReactNode;
   serviceTitle: string;
   imgUrl: string;
-  hasButton?:boolean
+  hasButton?:boolean;
+  selectedService?:ServiceType;
+  handleOpenPopup?: (service: ServiceType) => void;
 }
 
-export const ServicesCard = ({ serviceTitle, imgUrl, children, hasButton=false }: ServicesCardProps) => {
+export const ServicesCard = ({ serviceTitle, imgUrl, children, hasButton=false, selectedService, handleOpenPopup }: ServicesCardProps) => {
   return (
     <div className="w-full rounded overflow-hidden shadow-lg flex flex-col justify-between">
       <img className="w-full" src={imgUrl} alt={serviceTitle} />
@@ -17,7 +20,8 @@ export const ServicesCard = ({ serviceTitle, imgUrl, children, hasButton=false }
         <div className="font-bold text-xl mb-2">{serviceTitle}</div>
         <p className="text-gray-700 text-base">{children}</p>
       </div>
-      {hasButton &&<div className='px-6 py-4'><Button/></div>}
+      {hasButton && !handleOpenPopup && <div className='px-6 py-4' ><Button/></div>}
+      {hasButton && handleOpenPopup && selectedService  && <div className='px-6 py-4' onClick={() => handleOpenPopup(selectedService)}><ServiceCardButton/></div>}
     </div>
   );
 }

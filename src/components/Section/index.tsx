@@ -10,7 +10,7 @@ type SectionProps = {
 export const Section = ({children, className='', limiterClassName='', bgImg}:SectionProps) => {
   return (
   <section className={`w-full ${className}`} style={bgImg?{ backgroundImage: `url(${bgImg})` }:{}}>
-    <ScreenWidthLimiter className={limiterClassName}>{children}</ScreenWidthLimiter>
+    <ScreenWidthLimiter className={`px-4 ${limiterClassName}`}>{children}</ScreenWidthLimiter>
   </section>
   )
 }
