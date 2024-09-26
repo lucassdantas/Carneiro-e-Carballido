@@ -16,7 +16,7 @@ import { SuperTitle } from '@/components/Titles/SuperTitle';
 export const Home = () => {
   return (
     <Template pageTitle="Home" transparentHeader={true}>
-      <Section className="lg:h-screen lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
+      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
         <div className='flex flex-col gap-10'>
           <div className='lg:w-1/2 w-full text-white'>
             <SuperTitle content='Cec Consultores' color='white' className='mb-8'/>
@@ -56,7 +56,7 @@ export const Home = () => {
       </Section>
 
       <Section className='py-12 gap-12'>
-        <div className='flex lg:flex-row flex-col py-12 items-center gap-12'>
+        <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
             <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
@@ -75,29 +75,31 @@ export const Home = () => {
         <FAQ/>
       </Section>
 
-      <Section className='flex flex-col items-center gap-5 w-full py-10'>
-        <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
-        <h3 className='text-2xl font-semibold'>Excelente</h3>
-        <div className="flex">
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
-          <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
-            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-          </svg>
+      <Section className='gap-5 py-10'>
+        <div className="flex flex-col items-center justify-center">
+          <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
+          <h3 className='text-2xl font-semibold mt-4'>Excelente</h3>
+          <div className="flex">
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            <svg className={`h-5 w-5 text-yellow-500`} fill="currentColor">
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+          </div>
+          <p>Com base em 5 avaliações</p>
+          <img className='w-24' src={googleLogo} alt="Google Logo" />
+          <TestimonialCarousel/>
         </div>
-        <p>Com base em 5 avaliações</p>
-        <img className='w-24' src={googleLogo} alt="Google Logo" />
-        <TestimonialCarousel/>
       </Section>
     </Template>
   )

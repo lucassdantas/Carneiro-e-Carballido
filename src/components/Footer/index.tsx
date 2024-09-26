@@ -11,7 +11,7 @@ import { Section } from '@/components/Section';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className='w-full bg-dark-blue text-white lg:px-40 py-12'>
+    <footer className='w-full bg-neutral-800 text-white lg:px-40 py-12'>
       <Section>
         <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
           <div className='w-full flex flex-col items-center lg:items-start  lg:w-7/12 lg:pr-[25%] mb-8 lg:mb-0'>

@@ -8,7 +8,7 @@ interface ServicePopupProps{
 export const ServicePopup = ({selectedService, handleClosePopup}:ServicePopupProps) => {
   
   return (
-    <div className='fixed inset-0 flex items-center justify-center'>
+    <div className='fixed top-0 inset-0 flex items-center justify-center'>
       <div className="fixed inset-0  bg-black bg-opacity-50" onClick={(handleClosePopup)}></div>
       <div className="bg-white p-8 rounded-lg lg:max-w-[50%] max-w-[90%] w-full relative z-10 overflow-y-scroll max-h-[80%]">
         {/* Imagem do serviço */}
@@ -37,6 +37,6 @@ export const ServicePopup = ({selectedService, handleClosePopup}:ServicePopupPro
           &times;
         </button>
       </div>
-      </div>
+    </div>
   )
 }
