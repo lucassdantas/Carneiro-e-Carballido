@@ -16,7 +16,7 @@ import { SuperTitle } from '@/components/Titles/SuperTitle';
 export const Home = () => {
   return (
     <Template pageTitle="Home" transparentHeader={true}>
-      <Section className="lg:h-screen lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
+      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
         <div className='flex flex-col gap-10'>
           <div className='lg:w-1/2 w-full text-white'>
             <SuperTitle content='Cec Consultores' color='white' className='mb-8'/>
@@ -56,7 +56,7 @@ export const Home = () => {
       </Section>
 
       <Section className='py-12 gap-12'>
-        <div className='flex lg:flex-row flex-col py-12 items-center gap-12'>
+        <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
             <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>

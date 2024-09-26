@@ -11,39 +11,21 @@ type Testimonial = {
 export const TestimonialCarousel = () => {
   const testimonials: Testimonial[] = [
     {
-      name: 'João Silva',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
+      name: 'Mariana Freitas',
+      text: 'Empresa séria e comprometida com os clientes! Gosto de todos os profissionais, especialmente o Edilson, a Suellen e a Dayane. Extremamente atenciosos.',
       imgUrl: 'URL_DA_IMAGEM_DO_JOAO', 
       rating: 5,
     },
     {
-      name: 'Maria Oliveira',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
+      name: 'Antonia Maria ',
+      text: 'Fazem cerca de 12 anos que a Carbalido Consultores faz a contabilidade da minha empresa, e em todo esse tempo a conduta da empresa e dos funcionários foi sempre irrepreensível. Agora estou mudando de atividade, e confio plenamente que vou continuar sendo assistida da mesma forma, pois eles tratam com a mesma competência uma empresa pequena ou uma empresa grande, por que são Mega Profissionais.',
       imgUrl: 'URL_DA_IMAGEM_DA_MARIA', 
       rating: 5,
     },
     {
-      name: 'Carlos Pereira',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
+      name: 'Gabriel Ribeiro',
+      text: 'Empresa excelente, ótimos profissionais!',
       imgUrl: 'URL_DA_IMAGEM_DO_CARLOS', 
-      rating: 5,
-    },
-    {
-      name: 'Ana Santos',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
-      imgUrl: 'URL_DA_IMAGEM_DA_ANA', 
-      rating: 5,
-    },
-    {
-      name: 'Felipe Almeida',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
-      imgUrl: 'URL_DA_IMAGEM_DO_FELIPE', 
-      rating: 5,
-    },
-    {
-      name: 'Luciana Costa',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ',
-      imgUrl: 'URL_DA_IMAGEM_DA_LUCIANA', 
       rating: 5,
     },
   ];
@@ -52,21 +34,26 @@ export const TestimonialCarousel = () => {
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex >= testimonials.length - 3 ? 0 : prevIndex + 3
+      prevIndex >= testimonials.length - getVisibleTestimonials() ? 0 : prevIndex + getVisibleTestimonials()
     );
   };
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 3
+      prevIndex === 0 ? testimonials.length - getVisibleTestimonials() : prevIndex - getVisibleTestimonials()
     );
   };
 
+  // Função para determinar quantos cards mostrar por vez (1 em mobile, 3 no desktop)
+  const getVisibleTestimonials = () => {
+    return window.innerWidth < 768 ? 1 : 3;  // 1 card for mobile, 3 cards for desktop
+  };
+
   return (
-    <div className="relative w-full mx-auto rounded-lg ">
-      <div className="flex lg:flex-row flex-col items-center space-x-4">
-        {testimonials.slice(currentIndex, currentIndex + 3).map((testimonial, index) => (
-          <div key={index} className="flex-1 p-4 border rounded-lg bg-white shadow">
+    <div className="relative w-full rounded-lg ">
+      <div className="flex lg:flex-row flex-col justify-between items-center lg:space-x-4">
+        {testimonials.slice(currentIndex, currentIndex + getVisibleTestimonials()).map((testimonial, index) => (
+          <div key={index} className="flex-1 w-full my-4 p-4 border rounded-lg bg-white shadow h-[450px]">
             <img
               src={testimonial.imgUrl}
               alt={testimonial.name}
@@ -89,13 +76,18 @@ export const TestimonialCarousel = () => {
           </div>
         ))}
       </div>
-      
-      <button onClick={prevTestimonial} className="absolute left-0 -ml-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition ">
-        <FaAngleLeft/>
-      </button>
-      <button onClick={nextTestimonial} className="absolute right-0 -mr-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition ">
-        <FaAngleRight/>
-      </button>
+
+      {currentIndex > 0 && (
+        <button onClick={prevTestimonial} className="absolute left-0 -ml-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition">
+          <FaAngleLeft/>
+        </button>
+      )}
+
+      {currentIndex + getVisibleTestimonials() < testimonials.length && (
+        <button onClick={nextTestimonial} className="absolute right-0 -mr-4 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full p-2 hover:bg-gray-400 transition">
+          <FaAngleRight/>
+        </button>
+      )}
     </div>
   );
 };
