@@ -1,4 +1,3 @@
-import { ScreenWidthLimiter } from '@/components/ScreenWidthLimiter';
 import logo from '@/assets/logo-carneiro-e-carballido.png';
 import { pages, PageType } from '@/utils/constants/pages';
 import { Link } from 'react-router-dom';
@@ -18,7 +17,7 @@ export const Footer = () => {
             <Link to='/'>
               <img src={logo} alt='logotipo' className='max-w-[200px] lg:max-w-none'/>
             </Link>
-            <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade e Consultoria Fiscal e tributária </p>
+            <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH </p>
           </div>
           <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>
             <h4 className='text-2xl mb-4 font-bold text-center lg:text-left'>Menu</h4>

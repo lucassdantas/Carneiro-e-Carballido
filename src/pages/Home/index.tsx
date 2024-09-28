@@ -10,18 +10,18 @@ import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { Section } from '@/components/Section';
 import { services } from '@/utils/services';
 import { SuperTitle } from '@/components/Titles/SuperTitle';
-
-
+import chainImg from '@/assets/_img/mapa.jpg'
+import manInTheBeach from '@/assets/_banners/tranquilidade.jpg'
 
 export const Home = () => {
   return (
-    <Template pageTitle="Home" transparentHeader={true}>
-      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
+    <Template pageTitle="Home" transparentHeader={false}>
+      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manInTheBeach} >
         <div className='flex flex-col gap-10'>
-          <div className='lg:w-1/2 w-full text-white'>
+          <div className='lg:w-1/2 w-full text-black'>
             <SuperTitle content='Cec Consultores' color='white' className='mb-8'/>
-            <h1 className="text-white text-4xl font-bold my-4">Contabilidade da sua empresa de forma prática, segura e econômica</h1>
-            <p>Tenha a praticidade de uma contabilidade digital com a credibilidade de um atendimento humanizado.</p>
+            <h1 className="text-black text-4xl font-bold my-4">Contabilidade da sua empresa de forma prática, segura e econômica</h1>
+            <p>Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.</p>
           </div>
           <div className='w-64'>
             <Button content='Entre em contato'/>
@@ -59,7 +59,8 @@ export const Home = () => {
         <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
-            <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
+            <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH, oferecendo aos seus clientes um serviço diferenciado.</p>
+            <p className='mb-4'>Fundada em 2003, a empresa busca um aprimoramento contínuo para proporcionar aos seus clientes um atendimento direcionado e personalizado, feito diretamente pelos sócios do escritório.</p>
             <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
             <Button/>
           </div>
@@ -75,7 +76,7 @@ export const Home = () => {
         <FAQ/>
       </Section>
 
-      <Section className='gap-5 py-10'>
+      <Section className='gap-5 py-10 bg-contain bg-center bg-no-repeat' bgImg={chainImg}>
         <div className="flex flex-col items-center justify-center">
           <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
           <h3 className='text-2xl font-semibold mt-4'>Excelente</h3>
