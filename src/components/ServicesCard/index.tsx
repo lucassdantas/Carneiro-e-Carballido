@@ -14,7 +14,7 @@ type ServicesCardProps = {
 export const ServicesCard = ({ serviceTitle, imgUrl, children, hasButton=false, selectedService, handleOpenPopup }: ServicesCardProps) => {
   return (
     <div className="w-full rounded overflow-hidden shadow-lg flex flex-col justify-between">
-      <img className="w-full" src={imgUrl} alt={serviceTitle} />
+      <img className="w-full h-[250px] object-cover" src={imgUrl} alt={serviceTitle} />
       
       <div className="px-6 py-4 ">
         <div className="font-bold text-xl mb-2">{serviceTitle}</div>
