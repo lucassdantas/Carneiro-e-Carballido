@@ -10,12 +10,12 @@ import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { Section } from '@/components/Section';
 import { services } from '@/utils/services';
 import { SuperTitle } from '@/components/Titles/SuperTitle';
-
+import chainImg from '@/assets/_img/mapa.jpg'
 
 
 export const Home = () => {
   return (
-    <Template pageTitle="Home" transparentHeader={true}>
+    <Template pageTitle="Home" transparentHeader={false}>
       <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manImage} >
         <div className='flex flex-col gap-10'>
           <div className='lg:w-1/2 w-full text-white'>
@@ -59,7 +59,8 @@ export const Home = () => {
         <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
-            <p className='mb-4'>A Carneiro e Carballido oferece soluções contábeis personalizadas para crescimento e eficiência financeira, com foco em contabilidade empresarial, fiscal, trabalhista e consultoria tributária.</p>
+            <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH, oferecendo aos seus clientes um serviço diferenciado.</p>
+            <p className='mb-4'>Fundada em 2003, a empresa busca um aprimoramento contínuo para proporcionar aos seus clientes um atendimento direcionado e personalizado, feito diretamente pelos sócios do escritório.</p>
             <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
             <Button/>
           </div>
@@ -75,7 +76,7 @@ export const Home = () => {
         <FAQ/>
       </Section>
 
-      <Section className='gap-5 py-10'>
+      <Section className='gap-5 py-10 bg-contain bg-center bg-no-repeat' bgImg={chainImg}>
         <div className="flex flex-col items-center justify-center">
           <h2 className='text-center text text-4xl  text-dark-blue font-semibold'> O que nossos clientes falam</h2>
           <h3 className='text-2xl font-semibold mt-4'>Excelente</h3>
