@@ -1,4 +1,4 @@
-import logo from '@/assets/logo-carneiro-e-carballido.png'
+import logo from '@/assets/_img/logo.jpg'
 import { Button } from '@/components/Button'
 import { pages, PageType } from '@/utils/constants/pages'
 import { Link } from 'react-router-dom'
