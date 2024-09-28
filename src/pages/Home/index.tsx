@@ -19,7 +19,7 @@ export const Home = () => {
       <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manInTheBeach} >
         <div className='flex flex-col gap-10'>
           <div className='lg:w-1/2 w-full text-black'>
-            <SuperTitle content='Cec Consultores' color='white' className='mb-8'/>
+            <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
             <h1 className="text-black text-4xl font-bold my-4">Contabilidade da sua empresa de forma prática, segura e econômica</h1>
             <p>Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.</p>
           </div>
