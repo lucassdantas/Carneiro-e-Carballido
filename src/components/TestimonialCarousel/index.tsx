@@ -54,11 +54,6 @@ export const TestimonialCarousel = () => {
       <div className="flex lg:flex-row flex-col justify-between items-center lg:space-x-4">
         {testimonials.slice(currentIndex, currentIndex + getVisibleTestimonials()).map((testimonial, index) => (
           <div key={index} className="flex-1 w-full my-4 p-4 border rounded-lg bg-white shadow h-[450px]">
-            <img
-              src={testimonial.imgUrl}
-              alt={testimonial.name}
-              className="w-16 h-16 rounded-full mb-4"
-            />
             <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
             <div className="flex mb-2">
               {Array.from({ length: 5 }, (_, idx) => (
@@ -72,7 +67,7 @@ export const TestimonialCarousel = () => {
                 </svg>
               ))}
             </div>
-            <p className="text-gray-600 italic">"{testimonial.text}"</p>
+            <p className="text-black italic">"{testimonial.text}"</p>
           </div>
         ))}
       </div>

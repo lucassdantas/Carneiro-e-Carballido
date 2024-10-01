@@ -10,7 +10,6 @@ import { Section } from '@/components/Section';
 import { services } from '@/utils/services';
 import { SuperTitle } from '@/components/Titles/SuperTitle';
 import chainImg from '@/assets/_img/mapa.jpg'
-import manInTheBeach from '@/assets/_banners/tranquilidade.jpg'
 import { iconsData } from '@/utils/iconsData';
 import { Icons } from '@/types/icons';
 import { useState } from 'react';
@@ -18,7 +17,7 @@ import { useState } from 'react';
 export const Home = () => {
   const [bannerContent, setBannerContent] = useState('Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.')
   const [bannerTitle, setBannerTitle] = useState('Contabilidade da sua empresa de forma prática, segura e econômica')
-  const [bannerImg, setBannerImg] = useState(manInTheBeach)
+  const [bannerImg, setBannerImg] = useState(iconsData[0].image)
   const handleIconHover = (icon:Icons) => {
     setBannerContent(icon.content)
     setBannerTitle(icon.title)
@@ -26,8 +25,8 @@ export const Home = () => {
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={bannerImg} >
-        <div className='flex flex-col justify-between lg:w-[65%] lg:min-h-[220px] w-full text-black bg-white p-4 rounded-xl'>
+      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido py-12" bgImg={bannerImg} >
+        <div className='flex flex-col justify-between lg:w-[65%] lg:min-h-[220px] w-full text-black bg-white bg-opacity-80 p-4 rounded-xl'>
           <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
           <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
           <p className='min-h-[100px]'>{bannerContent}</p>
@@ -53,7 +52,7 @@ export const Home = () => {
         <div className='text-center'>
           <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
         </div>
-        <div className='flex  lg:flex-row flex-col items-center  gap-10 mt-10'>
+        <div className='flex lg:flex-row flex-col items-center space-x-10 mt-10'>
           {services.map((service, i) => {
             if(i>2) return null
             return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
