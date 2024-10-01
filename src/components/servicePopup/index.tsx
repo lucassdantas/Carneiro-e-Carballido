@@ -22,7 +22,8 @@ export const ServicePopup = ({selectedService, handleClosePopup}:ServicePopupPro
               key={i} 
               src={benefit.icon} 
               alt={'Icone de '+benefit.title} 
-              className='w-fit object-cover max-w-[75px] cursor-pointer'
+              className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
+              onClick={() => setCurrentBenefictContent(benefit.content)}
               onMouseOver={() => setCurrentBenefictContent(benefit.content)}
             />
           ))}

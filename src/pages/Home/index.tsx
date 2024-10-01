@@ -38,7 +38,8 @@ export const Home = () => {
                 src={icon.icon} 
                 alt={'Icone de '+icon.title} 
                 onMouseOver={() => handleIconHover(icon)}
-                className='w-fit object-cover max-w-[75px] cursor-pointer'
+                onClick={() => handleIconHover(icon)}
+                className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
               />
             ))}
           </div>
