@@ -10,14 +10,16 @@ import { Section } from '@/components/Section';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className='w-full bg-neutral-800 text-white lg:px-40 py-12'>
+    <footer className='w-full bg-blue-carneiro-e-carballido text-white lg:px-40 py-12'>
       <Section>
         <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
           <div className='w-full flex flex-col items-center lg:items-start  lg:w-7/12 lg:pr-[25%] mb-8 lg:mb-0'>
-            <Link to='/'>
-              <img src={logo} alt='logotipo' className='max-w-[200px] lg:max-w-none'/>
-            </Link>
-            <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH </p>
+            <div className='bg-white rounded-lg text-black p-4'>
+              <Link to='/'>
+                <img src={logo} alt='logotipo' className='max-w-[200px] lg:max-w-none'/>
+              </Link>
+              <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH </p>
+            </div>
           </div>
           <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>
             <h4 className='text-2xl mb-4 font-bold text-center lg:text-left'>Menu</h4>
