@@ -5,6 +5,7 @@ import companiesService from '@/assets/service-image-opening-and-legalization-of
 import costAccountingServiceImage from '@/assets/_img/regularizacao.jpg';
 import personalDepartment from '@/assets/_img/departamento.jpg';
 import regularizationImage from '@/assets/regularization-service-image.jpg';
+import { iconsData } from "@/utils/iconsData";
 export const services:ServiceType[] = [
   {
     title:'Soluções Contábeis',
@@ -21,7 +22,9 @@ export const services:ServiceType[] = [
       'Elaboração de relatórios contábeis',
       'Escrituração contábil',
     ],
-    resume:'Área responsável por todo o processamento, registro e análise das informações e documentos da empresa, necessários para a elaboração de relatórios gerenciais que serão utilizados pelos gestores.'
+    resume:'Área responsável por todo o processamento, registro e análise das informações e documentos da empresa, necessários para a elaboração de relatórios gerenciais que serão utilizados pelos gestores.',
+    benefits:[iconsData[2] ,iconsData[3], iconsData[4], iconsData[0]]
+
   },
   {
     title:'Legalização de Empresas',
@@ -35,7 +38,8 @@ export const services:ServiceType[] = [
       'Registros de alterações contratuais',
       'Registros de encerramentos de empresas'
     ],
-    resume: 'Área responsável pelo nascimento do seu negócio. É a parte de registro e regularização da empresa nos ógãos competentes. A abertura de uma empresa necessita de todo um processo legal a ser seguido.'
+    resume: 'Área responsável pelo nascimento do seu negócio. É a parte de registro e regularização da empresa nos ógãos competentes. A abertura de uma empresa necessita de todo um processo legal a ser seguido.',
+    benefits:[iconsData[0], iconsData[7]]
   },
   {
     title:'Soluções Para Pessoas Físicas',
@@ -50,7 +54,9 @@ export const services:ServiceType[] = [
       'Emissão das guias de recolhimento de impostos',
       'Obtenção de alvará para autônomo',
     ],
-    resume: 'Atuamos na regularização fiscal e tributária para pessoas físicas, proporcionando segurança no cumprimento das obrigações e suporte especializado.'
+    resume: 'Atuamos na regularização fiscal e tributária para pessoas físicas, proporcionando segurança no cumprimento das obrigações e suporte especializado.',
+    benefits:[iconsData[0], iconsData[7]]
+
   },
   {
     title:'Departamento de Pessoal/RH (Soluções completas para Gestão de Pessoas e SST. Tudo para cuidar da sua equipe)',
@@ -66,7 +72,9 @@ export const services:ServiceType[] = [
       'Gestão de Ponto: Controle de jornada de trabalho e cálculo de horas extras.',
       'Relatórios e Análises: Elaboração de relatórios gerenciais e análises de dados para tomada de decisão.',
     ],
-    resume:'Atendemos empresas dos mais variados segmentos, empresas escolares, terceiro setor e setor industrial (verificar uma maneira de incluir no site os segmentos que atendemos)'
+    resume:'Atendemos empresas dos mais variados segmentos, empresas escolares, terceiro setor e setor industrial (verificar uma maneira de incluir no site os segmentos que atendemos)',
+    benefits:[iconsData[2] ,iconsData[7], iconsData[0]]
+
   },
   {
     title:'Soluções Fiscais',
@@ -92,7 +100,10 @@ export const services:ServiceType[] = [
       'Preparação e entrega das obrigações acessórias mensais e anuais',
       'Regularização fiscal'
     ],
-    resume: 'Área responsável pelos impostos e obrigações acessórias da empresa, observando as alterações na mudança da legislação tributária. Diagnóstico do seu negócio, acompanhado de orientações e sugestões tributárias nos âmbitos Federal, Estadual e Municipal.'
+    resume: 'Área responsável pelos impostos e obrigações acessórias da empresa, observando as alterações na mudança da legislação tributária. Diagnóstico do seu negócio, acompanhado de orientações e sugestões tributárias nos âmbitos Federal, Estadual e Municipal.',
+    benefits:[iconsData[2] ,iconsData[3], iconsData[6], iconsData[7]]
+
+
   },
   {
     title:'Soluções Para Gestão de Pessoas e SST',
@@ -108,6 +119,7 @@ export const services:ServiceType[] = [
       'Gestão de Ponto: Controle de jornada de trabalho e cálculo de horas extras.',
       'Relatórios e Análises: Elaboração de relatórios gerenciais e análises de dados para tomada de decisão.'
     ],
-    resume: 'O Departamento de Pessoal é fundamental para o bom funcionamento de qualquer negócio. Temos tudo para cuidar da sua equipe.'
+    resume: 'O Departamento de Pessoal é fundamental para o bom funcionamento de qualquer negócio. Temos tudo para cuidar da sua equipe.',
+    benefits:[iconsData[6] ,iconsData[2], iconsData[7]]
   },
 ]

@@ -27,10 +27,10 @@ export const Home = () => {
   return (
     <Template pageTitle="Home" transparentHeader={false}>
       <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={bannerImg} >
-        <div className='lg:w-1/2 w-full text-black bg-white p-4 rounded-xl'>
+        <div className='flex flex-col justify-between lg:w-[65%] lg:min-h-[220px] w-full text-black bg-white p-4 rounded-xl'>
           <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
           <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
-          <p className='min-h-[120px]'>{bannerContent}</p>
+          <p className='min-h-[100px]'>{bannerContent}</p>
           <div className="flex w-full">
             {iconsData.map((icon:Icons, i:number) => (
               <img 
@@ -38,7 +38,7 @@ export const Home = () => {
                 src={icon.icon} 
                 alt={'Icone de '+icon.title} 
                 onMouseOver={() => handleIconHover(icon)}
-                className='w-fit max-w-[75px] '
+                className='w-fit object-cover max-w-[75px] cursor-pointer'
               />
             ))}
           </div>

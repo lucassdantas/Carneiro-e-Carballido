@@ -1,6 +1,6 @@
 import { Button, ServiceCardButton } from '@/components/Button';
 import { ServiceType } from '@/types/services';
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 type ServicesCardProps = {
   children: ReactNode;
