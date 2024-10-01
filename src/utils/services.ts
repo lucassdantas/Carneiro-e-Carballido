@@ -1,9 +1,9 @@
 import { ServiceType } from "@/types/services";
-import accountingService from '@/assets/image-accounting-service.jpg';
-import businessService from '@/assets/business-and-tax-consultancy-service-image.jpg';
+import accountingService from '@/assets/_img/contabilidade.jpg';
+import businessService from '@/assets/_img/abertura.jpg';
 import companiesService from '@/assets/service-image-opening-and-legalization-of-companies.jpg';
-import costAccountingServiceImage from '@/assets/Cost-Accounting-service-image.jpg';
-import personalDepartment from '@/assets/personnel-department-service-image.jpg';
+import costAccountingServiceImage from '@/assets/_img/regularizacao.jpg';
+import personalDepartment from '@/assets/_img/departamento.jpg';
 import regularizationImage from '@/assets/regularization-service-image.jpg';
 export const services:ServiceType[] = [
   {
