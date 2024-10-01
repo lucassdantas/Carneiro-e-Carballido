@@ -7,7 +7,7 @@ import { Section } from '@/components/Section'
 
 export const DesktopHeader = () => {
   return (
-    <header className='flex flex-col gap-5 bg-white relative py-5'>
+    <header className='flex flex-col gap-5 bg-white relative pb-5'>
       <SuperHeader/>
       <Section >
         <div className="flex items-center">

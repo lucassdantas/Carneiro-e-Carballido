@@ -5,7 +5,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa'
 
 export const SuperHeader = () => {
   return (
-    <Section>
+    <Section className='text-white bg-blue-carneiro-e-carballido py-2'>
       <div className="flex items-center gap-8">
         <div >
           <a href={address.url}  target='_blank' className='flex items-center gap-2'> <FaMapMarkerAlt/> {address.value}</a>
