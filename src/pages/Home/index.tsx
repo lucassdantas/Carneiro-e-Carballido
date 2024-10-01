@@ -11,16 +11,36 @@ import { services } from '@/utils/services';
 import { SuperTitle } from '@/components/Titles/SuperTitle';
 import chainImg from '@/assets/_img/mapa.jpg'
 import manInTheBeach from '@/assets/_banners/tranquilidade.jpg'
+import { iconsData } from '@/utils/iconsData';
+import { Icons } from '@/types/icons';
+import { useState } from 'react';
 
 export const Home = () => {
+  const [bannerContent, setBannerContent] = useState('Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.')
+  const [bannerTitle, setBannerTitle] = useState('Contabilidade da sua empresa de forma prática, segura e econômica')
+  const [bannerImg, setBannerImg] = useState(manInTheBeach)
+  const handleIconHover = (icon:Icons) => {
+    setBannerContent(icon.content)
+    setBannerTitle(icon.title)
+    setBannerImg(icon.image)
+  }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={manInTheBeach} >
-        <div className='flex flex-col gap-10'>
-          <div className='lg:w-1/2 w-full text-black'>
-            <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
-            <h1 className="text-black text-4xl font-bold my-4">Contabilidade da sua empresa de forma prática, segura e econômica</h1>
-            <p>Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.</p>
+      <Section className="lg:h-screen max-h-[868px] lg:p-40 py-12 bg-no-repeat bg-cover flex gap-10 items-center" bgImg={bannerImg} >
+        <div className='lg:w-1/2 w-full text-black bg-white p-4 rounded-xl'>
+          <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
+          <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
+          <p className='min-h-[120px]'>{bannerContent}</p>
+          <div className="flex w-full">
+            {iconsData.map((icon:Icons, i:number) => (
+              <img 
+                key={i} 
+                src={icon.icon} 
+                alt={'Icone de '+icon.title} 
+                onMouseOver={() => handleIconHover(icon)}
+                className='w-fit max-w-[75px] '
+              />
+            ))}
           </div>
           <div className='w-64'>
             <Button content='Entre em contato'/>
