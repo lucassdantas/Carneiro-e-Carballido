@@ -1,5 +1,4 @@
 import { Template } from '@/components/Template'
-import manImage from '@/assets/man-sitting-accessing-his-laptop.jpg';
 import googleLogo from '@/assets/Google-Logo.png'
 import banner from '@/assets/banner.jpg'
 import aboutImg from '@/assets/about-image.jpg'
