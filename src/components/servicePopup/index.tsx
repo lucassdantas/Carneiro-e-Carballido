@@ -7,7 +7,7 @@ interface ServicePopupProps{
   handleClosePopup: () => void;
 }
 export const ServicePopup = ({selectedService, handleClosePopup}:ServicePopupProps) => {
-  const [currentBenefictContent, setCurrentBenefictContent] = useState(selectedService.benefits[0].content)
+  const [currentBenefitTitle, setCurrentBenefitTitle] = useState(selectedService.benefits[0].title)
   return (
     <div className='fixed top-0 inset-0 flex items-center justify-center'>
       <div className="fixed inset-0  bg-black bg-opacity-50" onClick={(handleClosePopup)}></div>
@@ -23,12 +23,12 @@ export const ServicePopup = ({selectedService, handleClosePopup}:ServicePopupPro
               src={benefit.icon} 
               alt={'Icone de '+benefit.title} 
               className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
-              onClick={() => setCurrentBenefictContent(benefit.content)}
-              onMouseOver={() => setCurrentBenefictContent(benefit.content)}
+              onClick={() => setCurrentBenefitTitle(benefit.title)}
+              onMouseOver={() => setCurrentBenefitTitle(benefit.title)}
             />
           ))}
         </div>
-        <p className='min-h-[75px]'>{currentBenefictContent}</p>
+        <p>{currentBenefitTitle}</p>
         <div className="mt-6">
           <Button />
         </div>

@@ -58,7 +58,7 @@ export const services:ServiceType[] = [
     benefits:[iconsData[0], iconsData[7]]
 
   },
-  {
+  /*{
     title:'Departamento de Pessoal/RH (Soluções completas para Gestão de Pessoas e SST. Tudo para cuidar da sua equipe)',
     img:personalDepartment,
     topics:[
@@ -75,7 +75,7 @@ export const services:ServiceType[] = [
     resume:'Atendemos empresas dos mais variados segmentos, empresas escolares, terceiro setor e setor industrial (verificar uma maneira de incluir no site os segmentos que atendemos)',
     benefits:[iconsData[2] ,iconsData[7], iconsData[0]]
 
-  },
+  */
   {
     title:'Soluções Fiscais',
     img:costAccountingServiceImage,
@@ -107,7 +107,7 @@ export const services:ServiceType[] = [
   },
   {
     title:'Soluções Para Gestão de Pessoas e SST',
-    img:regularizationImage,
+    img:personalDepartment, 
     topics:[
       'Admissão e Demissão: Contratação, integração, rescisão contratual e todos os trâmites legais.',
       'Consultoria Trabalhista: Orientação sobre legislação trabalhista, acordos coletivos e rotinas internas.',
