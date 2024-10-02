@@ -78,7 +78,7 @@ export const Home = () => {
         <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
-            <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH, oferecendo aos seus clientes um serviço diferenciado.</p>
+            <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de contabilidade, consultoria fiscal e tributária e departamento de pessoal / RH, oferecendo aos seus clientes um serviço diferenciado.</p>
             <p className='mb-4'>Fundada em 2003, a empresa busca um aprimoramento contínuo para proporcionar aos seus clientes um atendimento direcionado e personalizado, feito diretamente pelos sócios do escritório.</p>
             <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
             <Button/>

@@ -1,6 +1,5 @@
 import { ServiceType } from "@/types/services";
 import accountingService from '@/assets/_img/contabilidade.jpg';
-import businessService from '@/assets/_img/abertura.jpg';
 import companiesService from '@/assets/service-image-opening-and-legalization-of-companies.jpg';
 import costAccountingServiceImage from '@/assets/_img/regularizacao.jpg';
 import personalDepartment from '@/assets/_img/departamento.jpg';
@@ -43,7 +42,7 @@ export const services:ServiceType[] = [
   },
   {
     title:'Soluções Para Pessoas Físicas',
-    img:businessService,
+    img:regularizationImage,
     topics:[
       'Acompanhamento dos dispositivos legais vigentes',
       'Cálculo do IRRF',
@@ -58,7 +57,7 @@ export const services:ServiceType[] = [
     benefits:[iconsData[0], iconsData[7]]
 
   },
-  {
+  /*{
     title:'Departamento de Pessoal/RH (Soluções completas para Gestão de Pessoas e SST. Tudo para cuidar da sua equipe)',
     img:personalDepartment,
     topics:[
@@ -75,7 +74,7 @@ export const services:ServiceType[] = [
     resume:'Atendemos empresas dos mais variados segmentos, empresas escolares, terceiro setor e setor industrial (verificar uma maneira de incluir no site os segmentos que atendemos)',
     benefits:[iconsData[2] ,iconsData[7], iconsData[0]]
 
-  },
+  */
   {
     title:'Soluções Fiscais',
     img:costAccountingServiceImage,
@@ -107,7 +106,7 @@ export const services:ServiceType[] = [
   },
   {
     title:'Soluções Para Gestão de Pessoas e SST',
-    img:regularizationImage,
+    img:personalDepartment, 
     topics:[
       'Admissão e Demissão: Contratação, integração, rescisão contratual e todos os trâmites legais.',
       'Consultoria Trabalhista: Orientação sobre legislação trabalhista, acordos coletivos e rotinas internas.',

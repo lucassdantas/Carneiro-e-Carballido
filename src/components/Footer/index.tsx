@@ -1,4 +1,4 @@
-import logo from '@/assets/logo-carneiro-e-carballido.png';
+import logo from '@/assets/logos/logo-branca.png';
 import { pages, PageType } from '@/utils/constants/pages';
 import { Link } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
@@ -13,12 +13,12 @@ export const Footer = () => {
     <footer className='w-full bg-blue-carneiro-e-carballido text-white lg:px-40 py-12'>
       <Section>
         <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
-          <div className='w-full flex flex-col items-center lg:items-start  lg:w-7/12 lg:pr-[25%] mb-8 lg:mb-0'>
-            <div className='bg-white rounded-lg text-black p-4'>
+          <div className='w-full flex flex-col items-center lg:items-start lg:w-7/12 lg:pr-[09%] mb-8 lg:mb-0'>
+            <div className=' p-4 flex flex-col'>
               <Link to='/'>
-                <img src={logo} alt='logotipo' className='max-w-[200px] lg:max-w-none'/>
+                <img src={logo} alt='logotipo' className='w-full max-w-[170px]'/>
               </Link>
-              <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade, Consultoria Fiscal e tributária e departamento de pessoal / RH </p>
+              <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de contabilidade, consultoria fiscal e tributária e departamento de pessoal / RH </p>
             </div>
           </div>
           <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>

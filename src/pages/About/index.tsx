@@ -1,8 +1,8 @@
 import { Template } from '@/components/Template'
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
-import tempBanner01 from '@/assets/_img/departamento.jpg'
 import tempBanner02 from '@/assets/_img/consultoria.jpg'
+import businessService from '@/assets/_img/abertura.jpg';
 
 
 export const About = () => {
@@ -16,7 +16,7 @@ export const About = () => {
             <p>Um negócio de sucesso exige estratégia, táticas eficazes e decisões equilibradas. Confie em nossos serviços e foque no crescimento da sua empresa</p>
           </div>
           <div className='flex lg:flex-row flex-col items-center gap-20 lg:mt-4'>
-            <img className='w-full rounded-lg shadow-lg object-cover' src={tempBanner01} alt="Imagem sobre a empresa" />
+            <img className='w-full rounded-lg shadow-lg object-cover' src={businessService} alt="Imagem sobre a empresa" />
             <img className='w-full rounded-lg shadow-lg object-cover' src={tempBanner02} alt="Imagem sobre a empresa" />
           </div>
           <div className='flex flex-col mt-4 lg:my-4'>
