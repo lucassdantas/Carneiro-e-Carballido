@@ -1,6 +1,5 @@
 import { ServiceType } from "@/types/services";
 import accountingService from '@/assets/_img/contabilidade.jpg';
-import businessService from '@/assets/_img/abertura.jpg';
 import companiesService from '@/assets/service-image-opening-and-legalization-of-companies.jpg';
 import costAccountingServiceImage from '@/assets/_img/regularizacao.jpg';
 import personalDepartment from '@/assets/_img/departamento.jpg';
@@ -43,7 +42,7 @@ export const services:ServiceType[] = [
   },
   {
     title:'Soluções Para Pessoas Físicas',
-    img:businessService,
+    img:regularizationImage,
     topics:[
       'Acompanhamento dos dispositivos legais vigentes',
       'Cálculo do IRRF',
