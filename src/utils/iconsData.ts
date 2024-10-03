@@ -29,13 +29,13 @@ export const iconsData:Icons[] = [
     icon:sustentabilityIcon,
     image:sustentabilityImage,
     title:'Sustentabilidade',
-    content:'Manter a contabilidade de sua empresa transparente e em ordem é uma prática essencial para a sustentabilidade de seu empreendimento, sendo assim nossa estratégia de sustentabilidade será sem dúvidas um componente essencial para ampliar os resultados de sua empresa de forma duradoura.'
+    content:'Manter a contabilidade de sua empresa transparente e em ordem é uma prática essencial para a sustentabilidade de seu empreendimento, sendo assim nossa estratégia de sustentabilidade será sem dúvidas um componente essencial para ampliar os resultados de sua empresa de forma duradoura.',
   },
   {
     icon:securityIcon,
     image:securityImage,
     title:'Segurança',
-    content:'Oferecemos a segurança de manter sua empresa com todas as obrigações tributárias fiscais em ordem e sempre atualizada com as alterações na legislação.'
+    content:'Oferecemos a segurança de manter sua empresa com todas as obrigações tributárias fiscais em ordem e sempre atualizada com as alterações na legislação.',
   },
   {
     icon:strategyIcon,

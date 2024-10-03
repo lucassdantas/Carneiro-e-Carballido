@@ -25,27 +25,27 @@ export const Home = () => {
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido py-12" bgImg={bannerImg} >
-        <div className='flex flex-col justify-between lg:w-[65%] lg:min-h-[220px] w-full text-black bg-white bg-opacity-80 p-4 rounded-xl'>
-          <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
-          <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
-          <p className='min-h-[100px]'>{bannerContent}</p>
-          <div className="flex w-full">
-            {iconsData.map((icon:Icons, i:number) => (
-              <img 
-                key={i} 
-                src={icon.icon} 
-                alt={'Icone de '+icon.title} 
-                onMouseOver={() => handleIconHover(icon)}
-                onClick={() => handleIconHover(icon)}
-                className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
-              />
-            ))}
+      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido py-12" bgImg={bannerImg}>
+          <div className='w-full flex flex-col justify-between lg:min-h-[220px] text-black bg-white bg-opacity-60 p-4 rounded-xl'>
+            <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
+            <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
+            <p className='min-h-[120px]'>{bannerContent}</p>
+            <div className="flex w-full">
+              {iconsData.map((icon:Icons, i:number) => (
+                <img 
+                  key={i} 
+                  src={icon.icon} 
+                  alt={'Icone de '+icon.title} 
+                  onMouseOver={() => handleIconHover(icon)}
+                  onClick={() => handleIconHover(icon)}
+                  className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
+                />
+              ))}
+            </div>
+            <div className='w-64'>
+              <Button content='Entre em contato'/>
+            </div>
           </div>
-          <div className='w-64'>
-            <Button content='Entre em contato'/>
-          </div>
-        </div>
       </Section>
 
       <Section className='relative flex flex-col items-center justify-center py-10 '>
