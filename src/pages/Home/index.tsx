@@ -25,12 +25,22 @@ export const Home = () => {
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido py-12" bgImg={bannerImg}>
-          <div className='w-full flex flex-col justify-between lg:min-h-[220px] text-black bg-white bg-opacity-60 p-4 rounded-xl'>
-            <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
-            <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
-            <p className='min-h-[120px]'>{bannerContent}</p>
-            <div className="flex w-full">
+      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido h-[500px]" bgImg={bannerImg}>
+        <div className='w-full h-[500px] flex flex-col justify-end py-4'>
+          <div className='w-full lg:h-[160px] flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl'>
+            {
+              /* 
+                <div className='lg:w-1/2 w-full h-full flex flex-col justify-between text-black bg-white bg-opacity-60 p-4 rounded-xl'>
+                  <SuperTitle content='Cec Consultores' color='black' className='mb-2'/>
+                  <h1 className="text-black text-4xl font-bold my-2">{bannerTitle}</h1>
+                  <p className='min-h-[120px]'>{bannerContent}</p>
+                  <div className='w-64'>
+                    <Button content='Entre em contato'/>
+                  </div>
+                </div> 
+              */
+            }
+            <div className="flex overflow-x-scroll w-full">
               {iconsData.map((icon:Icons, i:number) => (
                 <img 
                   key={i} 
@@ -38,14 +48,13 @@ export const Home = () => {
                   alt={'Icone de '+icon.title} 
                   onMouseOver={() => handleIconHover(icon)}
                   onClick={() => handleIconHover(icon)}
-                  className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
+                  className='sm:w-fit object-cover sm:max-w-[75px] w-[25%] cursor-pointer'
                 />
               ))}
             </div>
-            <div className='w-64'>
-              <Button content='Entre em contato'/>
-            </div>
+            <p>{bannerContent}</p>
           </div>
+        </div>
       </Section>
 
       <Section className='relative flex flex-col items-center justify-center py-10 '>
