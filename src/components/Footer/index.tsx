@@ -14,7 +14,7 @@ export const Footer = () => {
       <Section>
         <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
           <div className='w-full flex flex-col items-center lg:items-start lg:w-7/12 lg:pr-[09%] mb-8 lg:mb-0'>
-            <div className=' p-4 flex flex-col'>
+            <div className=' p-4 flex flex-col lg:items-start items-center'>
               <Link to='/'>
                 <img src={logo} alt='logotipo' className='w-full max-w-[170px]'/>
               </Link>
