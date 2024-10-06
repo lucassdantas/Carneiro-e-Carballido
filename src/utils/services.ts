@@ -4,7 +4,7 @@ import companiesService from '@/assets/service-image-opening-and-legalization-of
 import costAccountingServiceImage from '@/assets/_img/regularizacao.jpg';
 import personalDepartment from '@/assets/_img/departamento.jpg';
 import regularizationImage from '@/assets/regularization-service-image.jpg';
-import { iconsData } from "@/utils/iconsData";
+import { getIconsByTitle, iconsData } from "@/utils/iconsData";
 export const services:ServiceType[] = [
   {
     title:'Soluções Contábeis',
@@ -22,7 +22,9 @@ export const services:ServiceType[] = [
       'Escrituração contábil',
     ],
     resume:'Área responsável por todo o processamento, registro e análise das informações e documentos da empresa, necessários para a elaboração de relatórios gerenciais que serão utilizados pelos gestores.',
-    benefits:[iconsData[2] ,iconsData[3], iconsData[4], iconsData[0]]
+    benefits:[
+      ...getIconsByTitle(iconsData, ['Economia', 'Estratégia', 'Segurança', 'Tranquilidade'])
+    ]
 
   },
   {
@@ -38,7 +40,9 @@ export const services:ServiceType[] = [
       'Registros de encerramentos de empresas'
     ],
     resume: 'Área responsável pelo nascimento do seu negócio. É a parte de registro e regularização da empresa nos ógãos competentes. A abertura de uma empresa necessita de todo um processo legal a ser seguido.',
-    benefits:[iconsData[0], iconsData[7]]
+    benefits:[
+      ...getIconsByTitle(iconsData, ['Informação', 'Tranquilidade'])
+    ]
   },
   {
     title:'Soluções Para Pessoas Físicas',
@@ -54,7 +58,9 @@ export const services:ServiceType[] = [
       'Obtenção de alvará para autônomo',
     ],
     resume: 'Atuamos na regularização fiscal e tributária para pessoas físicas, proporcionando segurança no cumprimento das obrigações e suporte especializado.',
-    benefits:[iconsData[0], iconsData[7]]
+    benefits:[
+      ...getIconsByTitle(iconsData, ['Informação', 'Segurança', 'Tranquilidade'])
+    ]
 
   },
   /*{
@@ -100,9 +106,9 @@ export const services:ServiceType[] = [
       'Regularização fiscal'
     ],
     resume: 'Área responsável pelos impostos e obrigações acessórias da empresa, observando as alterações na mudança da legislação tributária. Diagnóstico do seu negócio, acompanhado de orientações e sugestões tributárias nos âmbitos Federal, Estadual e Municipal.',
-    benefits:[iconsData[2] ,iconsData[3], iconsData[6], iconsData[7]]
-
-
+    benefits:[
+      ...getIconsByTitle(iconsData, ['Equilíbrio', 'Estratégia', 'Informação', 'Segurança'])
+    ]
   },
   {
     title:'Soluções Para Gestão de Pessoas e SST',
@@ -119,6 +125,8 @@ export const services:ServiceType[] = [
       'Relatórios e Análises: Elaboração de relatórios gerenciais e análises de dados para tomada de decisão.'
     ],
     resume: 'O Departamento de Pessoal é fundamental para o bom funcionamento de qualquer negócio. Temos tudo para cuidar da sua equipe.',
-    benefits:[iconsData[6] ,iconsData[2], iconsData[7]]
+    benefits:[
+      ...getIconsByTitle(iconsData, ['Informação', 'Segurança', 'Tranquilidade'])
+    ]
   },
 ]
