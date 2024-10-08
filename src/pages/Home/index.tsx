@@ -25,9 +25,9 @@ export const Home = () => {
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="bg-no-repeat lg:bg-fit bg-contain bg-center bg-blue-carneiro-e-carballido lg:h-[500px] sm:h-[250px] h-[150px]" bgImg={bannerImg}>
+      <Section className="bg-no-repeat lg:bg-fit bg-contain bg-center bg-white lg:h-[500px] sm:h-[250px] h-[150px]" bgImg={bannerImg}>
         <div className='w-full lg:h-[500px] h-full flex flex-col justify-end py-4'>
-          <div className='w-full lg:h-[160px] lg:flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl hidden'>
+          <div className='w-full lg:h-[200px] lg:flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl hidden'>
             {
               /* 
                 <div className='lg:w-1/2 w-full h-full flex flex-col justify-between text-black bg-white bg-opacity-60 p-4 rounded-xl'>
