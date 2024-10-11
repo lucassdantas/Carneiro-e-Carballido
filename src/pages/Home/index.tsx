@@ -25,12 +25,22 @@ export const Home = () => {
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="bg-no-repeat bg-fit bg-center bg-blue-carneiro-e-carballido py-12" bgImg={bannerImg}>
-          <div className='w-full flex flex-col justify-between lg:min-h-[220px] text-black bg-white bg-opacity-60 p-4 rounded-xl'>
-            <SuperTitle content='Cec Consultores' color='black' className='mb-8'/>
-            <h1 className="text-black text-4xl font-bold my-4">{bannerTitle}</h1>
-            <p className='min-h-[120px]'>{bannerContent}</p>
-            <div className="flex w-full">
+      <Section className="bg-no-repeat lg:bg-fit bg-contain bg-center bg-white lg:h-[500px] sm:h-[250px] h-[150px]" bgImg={bannerImg}>
+        <div className='w-full lg:h-[500px] h-full flex flex-col justify-end py-4'>
+          <div className='w-full lg:h-[200px] lg:flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl hidden'>
+            {
+              /* 
+                <div className='lg:w-1/2 w-full h-full flex flex-col justify-between text-black bg-white bg-opacity-60 p-4 rounded-xl'>
+                  <SuperTitle content='Cec Consultores' color='black' className='mb-2'/>
+                  <h1 className="text-black text-4xl font-bold my-2">{bannerTitle}</h1>
+                  <p className='min-h-[120px]'>{bannerContent}</p>
+                  <div className='w-64'>
+                    <Button content='Entre em contato'/>
+                  </div>
+                </div> 
+              */
+            }
+            <div className="flex lg:overflow-hidden overflow-x-scroll w-full">
               {iconsData.map((icon:Icons, i:number) => (
                 <img 
                   key={i} 
@@ -38,14 +48,33 @@ export const Home = () => {
                   alt={'Icone de '+icon.title} 
                   onMouseOver={() => handleIconHover(icon)}
                   onClick={() => handleIconHover(icon)}
-                  className='w-fit object-cover max-w-[75px] cursor-pointer overflow-x-scroll'
+                  className='lg:w-fit object-cover lg:max-w-[75px] w-[25%] cursor-pointer'
                 />
               ))}
             </div>
-            <div className='w-64'>
-              <Button content='Entre em contato'/>
-            </div>
+            <p className='font-bold text-lg'>{bannerTitle}</p>
+            <p>{bannerContent}</p>
           </div>
+        </div>
+      </Section>
+
+      <Section className='lg:hidden block'>
+        <div className='w-full lg:h-[160px] flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl '>
+          <div className="flex overflow-x-scroll lg:w-full w-fit">
+            {iconsData.map((icon:Icons, i:number) => (
+              <img 
+                key={i} 
+                src={icon.icon} 
+                alt={'Icone de '+icon.title} 
+                onMouseOver={() => handleIconHover(icon)}
+                onClick={() => handleIconHover(icon)}
+                className='w-[75px] cursor-pointer'
+              />
+            ))}
+          </div>
+          <p className='font-bold text-lg'>{bannerTitle}</p>
+          <p>{bannerContent}</p>
+        </div>
       </Section>
 
       <Section className='relative flex flex-col items-center justify-center py-10 '>
@@ -69,7 +98,7 @@ export const Home = () => {
       >
         <div className="text-center">
           <h2 className="text-white text-4xl font-semibold ">Melhorar o seu negócio</h2>
-          <p className="text-white text-2xl ">Profissionais qualificados e preparados para trazer as melhores soluções.</p>
+          <p className="text-white text-2xl ">Temos profissionais qualificados e preparados para trazer as melhores soluções para o seu negócio</p>
         </div>
 
       </Section>

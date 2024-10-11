@@ -68,3 +68,14 @@ export const iconsData:Icons[] = [
     content:'Com uma equipe dinâmica temos a solução rápida, precisa e moldada para seu negócio.'
   },
 ]
+
+export const getIconsByTitle = (icons:Icons[], titles:string[]):(Icons | string)[] => {
+  let filteredIcons:(Icons|string)[] = []
+  titles.forEach(title => {
+    icons.forEach(icon => {
+      if(icon.title === title) filteredIcons.push(icon)
+    })
+  })
+  if(filteredIcons.length === 0) filteredIcons = ['Nenhum ícone encontrado']
+  return filteredIcons
+}

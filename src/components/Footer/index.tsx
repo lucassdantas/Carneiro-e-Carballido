@@ -1,4 +1,4 @@
-import logo from '@/assets/logos/logo-branca.png';
+import logo from '@/assets/logos/logo-amarela.png';
 import { pages, PageType } from '@/utils/constants/pages';
 import { Link } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
@@ -14,7 +14,7 @@ export const Footer = () => {
       <Section>
         <div className='flex flex-col lg:flex-row items-center py-12 lg:py-24'>
           <div className='w-full flex flex-col items-center lg:items-start lg:w-7/12 lg:pr-[09%] mb-8 lg:mb-0'>
-            <div className=' p-4 flex flex-col'>
+            <div className=' p-4 flex flex-col lg:items-start items-center'>
               <Link to='/'>
                 <img src={logo} alt='logotipo' className='w-full max-w-[170px]'/>
               </Link>
@@ -22,7 +22,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>
-            <h4 className='text-2xl mb-4 font-bold text-center lg:text-left'>Menu</h4>
+            <h4 className='text-2xl mb-4 font-bold text-center lg:text-left text-yellow-carneiro-e-carballido'>Menu</h4>
             <ul className='flex flex-col gap-2 items-center lg:items-start'>
               {pages.map((page: PageType) => {
                 if (page.showOnHeader)
@@ -38,7 +38,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div className='w-full lg:w-4/12'>
-            <h4 className='text-2xl font-bold mb-4 text-center lg:text-left'>Contato</h4>
+            <h4 className='text-2xl font-bold mb-4 text-center lg:text-left text-yellow-carneiro-e-carballido'>Contato</h4>
             <ul className='flex flex-col gap-2 items-center lg:items-start'>
               <li>
                 <a href={email.url} target='_blank' className='flex gap-2 items-center'>

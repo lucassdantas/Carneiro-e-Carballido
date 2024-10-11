@@ -5,5 +5,5 @@ export interface ServiceType{
   title:string;
   topics:string[];
   resume:string;
-  benefits:Icons[];
+  benefits:(Icons | string)[];
 }
