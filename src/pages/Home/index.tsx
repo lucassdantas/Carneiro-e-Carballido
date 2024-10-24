@@ -119,10 +119,10 @@ export const Home = () => {
       </Section>
 
 
-      <Section className='bg-light-gray py-10'>
+      {/* <Section className='bg-light-gray py-10'>
         <h2 className="text-4xl  text-center mb-6 font-semibold">Perguntas Frequentes</h2>
         <FAQ/>
-      </Section>
+      </Section> */}
 
       <Section className='gap-5 py-10 bg-contain bg-center bg-no-repeat' bgImg={chainImg}>
         <div className="flex flex-col items-center justify-center">
