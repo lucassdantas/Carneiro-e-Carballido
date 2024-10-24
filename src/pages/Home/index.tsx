@@ -107,9 +107,9 @@ export const Home = () => {
         <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
           <div className="flex flex-col lg:w-1/2 w-full items-start">
             <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
-            <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de contabilidade, consultoria fiscal e tributária e departamento de pessoal / RH, oferecendo aos seus clientes um serviço diferenciado.</p>
-            <p className='mb-4'>Fundada em 2003, a empresa busca um aprimoramento contínuo para proporcionar aos seus clientes um atendimento direcionado e personalizado, feito diretamente pelos sócios do escritório.</p>
-            <p className='mb-4'>Te ajudamos a escolher o formato ideal para sua empresa, de acordo com seu perfil de empreendedor</p>
+            <p className='mb-4'>A Carneiro & Carballido Consultores se destaca pela excelência e experiência em contabilidade, consultoria fiscal e tributária, além de serviços de departamento pessoal/RH, proporcionando aos seus clientes um serviço único.</p>
+            <p className='mb-4'>Desde sua fundação em 2003, a empresa está comprometida com a melhoria contínua, visando oferecer um atendimento personalizado, realizado diretamente pelos sócios.</p>
+            <p className='mb-4'>Ajudamos você a definir o formato ideal para sua empresa, de acordo com seu perfil empreendedor.</p>
             <Button/>
           </div>
           <div className="flex flex-col lg:w-1/2 w-full items-center">
@@ -119,10 +119,10 @@ export const Home = () => {
       </Section>
 
 
-      <Section className='bg-light-gray py-10'>
+      {/* <Section className='bg-light-gray py-10'>
         <h2 className="text-4xl  text-center mb-6 font-semibold">Perguntas Frequentes</h2>
         <FAQ/>
-      </Section>
+      </Section> */}
 
       <Section className='gap-5 py-10 bg-contain bg-center bg-no-repeat' bgImg={chainImg}>
         <div className="flex flex-col items-center justify-center">
