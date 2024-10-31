@@ -81,7 +81,7 @@ export const Home = () => {
         <div className='text-center'>
           <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
         </div>
-        <div className='flex lg:flex-row flex-col items-center space-x-10 mt-10'>
+        <div className='flex lg:flex-row flex-col lg:items-stretch items-center lg:space-x-10 lg:space-y-0 space-y-10 mt-10'>
           {services.map((service, i) => {
             if(i>2) return null
             return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
