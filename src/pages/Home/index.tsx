@@ -52,7 +52,7 @@ export const Home = () => {
                 />
               ))}
             </div>
-            <p className='font-bold text-lg'>{bannerTitle}</p>
+            <p className='font-bold text-lg title'>{bannerTitle}</p>
             <p>{bannerContent}</p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export const Home = () => {
         <div className='text-center'>
           <h2 className='text-4xl text-dark-blue font-semibold'>Nossos serviços</h2>
         </div>
-        <div className='flex lg:flex-row flex-col items-center space-x-10 mt-10'>
+        <div className='flex lg:flex-row flex-col lg:items-stretch items-center lg:space-x-10 lg:space-y-0 space-y-10 mt-10'>
           {services.map((service, i) => {
             if(i>2) return null
             return <ServicesCard key={i} serviceTitle={service.title} imgUrl={service.img}>{service.resume}</ServicesCard>
@@ -105,8 +105,8 @@ export const Home = () => {
 
       <Section className='py-12 gap-12'>
         <div className='flex lg:flex-row flex-col-reverse py-12 items-center gap-12'>
-          <div className="flex flex-col lg:w-1/2 w-full items-start">
-            <h2 className='text-4xl mb-4  text-dark-blue font-semibold'>Sobre a empresa</h2>
+          <div className="flex flex-col lg:w-1/2 w-full text-justify ">
+            <h2 className='text-4xl mb-4  text-dark-blue font-semibold lg:text-left text-center'>Sobre a empresa</h2>
             <p className='mb-4'>A Carneiro & Carballido Consultores se destaca pela excelência e experiência em contabilidade, consultoria fiscal e tributária, além de serviços de departamento pessoal/RH, proporcionando aos seus clientes um serviço único.</p>
             <p className='mb-4'>Desde sua fundação em 2003, a empresa está comprometida com a melhoria contínua, visando oferecer um atendimento personalizado, realizado diretamente pelos sócios.</p>
             <p className='mb-4'>Ajudamos você a definir o formato ideal para sua empresa, de acordo com seu perfil empreendedor.</p>
