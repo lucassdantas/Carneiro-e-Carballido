@@ -52,7 +52,7 @@ export const Home = () => {
                 />
               ))}
             </div>
-            <p className='font-bold text-lg'>{bannerTitle}</p>
+            <p className='font-bold text-lg title'>{bannerTitle}</p>
             <p>{bannerContent}</p>
           </div>
         </div>
