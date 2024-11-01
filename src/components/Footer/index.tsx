@@ -18,7 +18,7 @@ export const Footer = () => {
               <Link to='/'>
                 <img src={logo} alt='logotipo' className='w-full max-w-[170px]'/>
               </Link>
-              <p className='mt-4 text-center lg:text-left'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de contabilidade, consultoria fiscal e tributária e departamento de pessoal / RH </p>
+              <p className='mt-4 text-center lg:text-justify'>Fundada em 2003, A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de contabilidade, consultoria fiscal e tributária e departamento de pessoal / RH </p>
             </div>
           </div>
           <div className='w-full lg:w-3/12 mb-8 lg:mb-0'>
