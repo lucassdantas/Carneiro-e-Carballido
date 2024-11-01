@@ -97,7 +97,7 @@ export const Home = () => {
         bgImg={banner}
       >
         <div className="text-center">
-          <h2 className="text-white text-4xl font-semibold ">Melhorar o seu negócio</h2>
+          <h2 className="text-white text-4xl font-semibold ">Tenha a contabilidade da sua empresa de forma prática, segura e econômica</h2>
           <p className="text-white text-2xl ">Temos profissionais qualificados e preparados para trazer as melhores soluções para o seu negócio</p>
         </div>
 
