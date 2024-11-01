@@ -28,7 +28,7 @@ export const Footer = () => {
                 if (page.showOnHeader)
                   return (
                     <Link to={page.url} key={page.url}>
-                      <li className='flex items-center gap-1'>
+                      <li className='flex items-center gap-2'>
                         <FaAngleRight />
                         {page.title}
                       </li>
