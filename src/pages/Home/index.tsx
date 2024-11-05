@@ -93,7 +93,7 @@ export const Home = () => {
       </Section>
 
       <Section
-        className="businessBg w-full h-72 p-10 bg-fixed bg-cover bg-no-repeat bg-center flex items-center justify-center"
+        className="businessBg w-full py-10 lg:h-72 lg:p-10 bg-fixed bg-cover bg-no-repeat bg-center flex items-center justify-center"
         bgImg={banner}
       >
         <div className="text-center">
