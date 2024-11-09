@@ -15,19 +15,21 @@ import { Icons } from '@/types/icons';
 import { useState } from 'react';
 
 export const Home = () => {
-  const [bannerContent, setBannerContent] = useState('Tenha a praticidade de uma contabilidade com a credibilidade de um atendimento humanizado.')
-  const [bannerTitle, setBannerTitle] = useState('Contabilidade da sua empresa de forma prática, segura e econômica')
+  const [bannerContent, setBannerContent] = useState('')
+  const [bannerTitle, setBannerTitle] = useState('')
   const [bannerImg, setBannerImg] = useState(iconsData[0].image)
+  const [iconsContainerHeight, setIconsContainerHeight] = useState('h-fit')
   const handleIconHover = (icon:Icons) => {
     setBannerContent(icon.content)
     setBannerTitle(icon.title)
+    setIconsContainerHeight('lg:h-[200px]')
     setBannerImg(icon.image)
   }
   return (
     <Template pageTitle="Home" transparentHeader={false}>
-      <Section className="bg-no-repeat lg:bg-fit bg-contain bg-center bg-white lg:h-[500px] sm:h-[250px] h-[150px]" bgImg={bannerImg}>
+      <Section className={"bg-no-repeat lg:bg-fit bg-contain bg-center bg-white lg:h-[500px] sm:h-[250px] h-[150px]"} bgImg={bannerImg}>
         <div className='w-full lg:h-[500px] h-full flex flex-col justify-end py-4'>
-          <div className='w-full lg:h-[200px] lg:flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl hidden'>
+          <div className={'w-full lg:flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl hidden ' + iconsContainerHeight}>
             {
               /* 
                 <div className='lg:w-1/2 w-full h-full flex flex-col justify-between text-black bg-white bg-opacity-60 p-4 rounded-xl'>
@@ -59,7 +61,7 @@ export const Home = () => {
       </Section>
 
       <Section className='lg:hidden block'>
-        <div className='w-full lg:h-[160px] flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl '>
+        <div className={'w-full flex flex-col text-black bg-white bg-opacity-60 p-4 rounded-xl '}>
           <div className="flex overflow-x-scroll lg:w-full w-fit">
             {iconsData.map((icon:Icons, i:number) => (
               <img 
