@@ -8,7 +8,7 @@ export default {
     extend: {
       colors:{
         'green-wpp':'#25D366',
-        'yellow-carneiro-e-carballido':'#fec632',
+        'yellow-carneiro-e-carballido':'#FFC530',
         'blue-carneiro-e-carballido':'#337a97',
         'dark-blue': '#002936',
         'dark-yellow': '#725915',
