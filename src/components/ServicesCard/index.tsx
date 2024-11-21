@@ -14,10 +14,10 @@ type ServicesCardProps = {
 export const ServicesCard = ({ serviceTitle, imgUrl, children, hasButton=false, selectedService, handleOpenPopup }: ServicesCardProps) => {
   return (
     <div className="w-full rounded overflow-hidden shadow-lg flex flex-col justify-between max-w-[650px]">
-      <img className="w-full h-[250px] object-cover" src={imgUrl} alt={serviceTitle} />
-      <div className="px-6 py-4 ">
+      <img className="w-full min-h-[250px] max-h-[250px] object-cover" src={imgUrl} alt={serviceTitle} />
+      <div className="px-6 py-4 flex flex-col justify-start items-start h-full ">
         <div className="font-bold text-xl mb-2">{serviceTitle}</div>
-        <p className="text-gray-700 text-base text-justify">{children}</p>
+        <p className="text-gray-700 text-base text-justify tracking-tighter" style={{wordSpacing:'-25%'}}>{children}</p>
       </div>
       {hasButton && !handleOpenPopup && <div className='px-6 py-4' ><Button/></div>}
       {hasButton && handleOpenPopup && selectedService  && <div className='px-6 py-4' onClick={() => handleOpenPopup(selectedService)}><ServiceCardButton/></div>}

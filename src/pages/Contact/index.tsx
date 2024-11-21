@@ -18,7 +18,7 @@ export const Contact = () => {
       <Section className='pt-24 '>
         <div className="flex lg:flex-row flex-col-reverse items-center gap-12 ">
           <div className="flex flex-col lg:w-1/2 w-full">
-            <SuperTitle content='Continue conectado conosco' className='mb-2'/>
+            <SuperTitle content='Continue conectado conosco' className='text-blue-carneiro-e-carballido mb-2'/>
             <h2 className='text-4xl mb-4'>Fale conosco para uma solução personalizada</h2>
             <ul className='flex flex-col gap-2 items-start max-w-[60%]'>
               <li>
