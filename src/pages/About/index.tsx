@@ -15,7 +15,7 @@ export const About = () => {
         <div className="flex lg:flex-row flex-col-reverse items-center justify-between w-full">
           <div className="w-full lg:w-1/2 flex flex-col  lg:items-start items-center text-justify">
             <SuperTitle className='text-blue-carneiro-e-carballido' content='Nós somos a Carneiro & Carbalido'/>
-            <h1 className='text-3xl text-dark-blue font-semibold my-4'>Transformamos a contabilidade em uma vantagem estratégica</h1>
+            <h1 className='text-3xl text-dark-blue font-semibold my-4 text-center lg:text-left'>Transformamos a contabilidade em uma vantagem estratégica</h1>
             <p className='mb-4'>Um negócio de sucesso exige estratégia, táticas eficazes e decisões equilibradas. Confie em nossos serviços e foque no crescimento da sua empresa</p>
             <p className='mb-4'>O mundo dos negócios exige muito mais do que apenas cumprimento de obrigações fiscais. Para prosperar, é essencial contar com táticas eficazes, planejamento detalhado e decisões embasadas em análises precisas. Nós, da Carneiro & Carbalido, estamos aqui para ajudar você a enxergar a contabilidade como uma ferramenta crucial para a gestão estratégica. Assim, você pode focar no que realmente importa: o crescimento sustentável e a expansão de sua empresa.</p>
             <div className='w-[250px] lg:text-left text-center'>
@@ -36,7 +36,7 @@ export const About = () => {
 
           <div className="w-full flex flex-col lg:items-start items-center lg:w-1/2 text-justify">
             <SuperTitle className='text-blue-carneiro-e-carballido' content='Nossa equipe'/>
-            <h1 className='text-3xl text-dark-blue font-semibold my-4'>Equipe Experiente e Comprometida</h1>
+            <h1 className='text-3xl text-dark-blue font-semibold my-4 text-center lg:text-left'>Equipe Experiente e Comprometida</h1>
             <p className='mb-4'>A Carneiro & Carballido Consultores reúne a qualidade e experiência dos serviços de Contabilidade e Consultoria Fiscal e tributária e Serviços de Departamento Pessoal/RH oferecendo aos seus clientes um serviço de contabilidade diferenciado. Fundada, em 2003, a empresa busca um aprimoramento contínuo para proporcionar aos seus clientes um atendimento direcionado e personalizado.</p>
             <p className='mb-4'>Nossa missão é dar o suporte necessário, no que se refere à legislação fiscal e contábil, para que o empreendedor possa se preocupar apenas em gerir seu negócio e otimizar seus ganhos.
             Nossa visão é ser uma organização contábil reconhecida pelo profissionalismo e qualidade nos serviços que prestamos.</p>
